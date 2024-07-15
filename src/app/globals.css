@@ -38,6 +38,13 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --color-primary: #c70006;
+  --color-secondary: #0d0f64;
+
+  --color-font: #1a1a1a;
+  --color-font-contrast: #fff;
+  --color-font-secondary: #6e6e6e
 }
 
 @media (prefers-color-scheme: dark) {
@@ -86,13 +93,8 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--color-font);
+  background-color: #fff;
 }
 
 a {

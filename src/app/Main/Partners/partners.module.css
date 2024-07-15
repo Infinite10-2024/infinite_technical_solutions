@@ -1,0 +1,53 @@
+.container {
+  text-align: center;
+  margin-top: 52px;
+}
+
+.container p {
+  font-size: 48px;
+  margin-bottom: 34px;
+}
+
+.sliderContainer {
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #4b5563;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  height: 185px;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  height: 75px;
+  padding: 52px;
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width: 200%;
+  animation: slide 35s linear infinite;
+}
+
+.slider img {
+  height: 80px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
