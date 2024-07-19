@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  gap: 104px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 630px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 24px;
+  color: var(--color-font-secondary);
+}
+
+.description b {
+  color: #191919;
+}
+
+.feats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feat {
+  color: #1a1a1a;
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+
+.illustration {
+  max-height: 500px;
+}
