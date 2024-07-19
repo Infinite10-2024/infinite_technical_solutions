@@ -1,5 +1,5 @@
 .container {
- padding: 100px 64px;
+  padding: 100px 64px;
 }
 
 .headerContainer {
@@ -24,9 +24,14 @@
   font-size: 16px;
 }
 
+.route {
+  cursor: pointer;
+}
+
 .active {
   font-weight: 600;
   position: relative;
+  cursor: pointer;
 }
 
 .active::after {

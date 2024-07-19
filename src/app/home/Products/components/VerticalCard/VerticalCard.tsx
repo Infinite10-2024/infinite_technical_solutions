@@ -13,7 +13,7 @@ const VerticalCard = ({ product }: VerticalCardProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <Image src={image} alt="image" width={368} height={217} />
+        <Image src={image} alt="image" fill/>
       </div>
       <div className={styles.info}>
         <div className={styles.title}>{title}</div>

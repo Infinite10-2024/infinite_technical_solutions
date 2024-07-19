@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./exploreButton.module.css";
 import playBtn from "../../../../../../public/assets/svg/hero/hero-play-btn.svg";
 import { motion } from "framer-motion";
+import { scrollTo } from "@/app/utils/scroll";
 
 const ExploreButton = () => {
   return (
@@ -162,7 +163,10 @@ const ExploreButton = () => {
           fill="white"
         />
       </motion.svg>
-      <button className={styles.playBtn}>
+      <button
+        className={styles.playBtn}
+        onClick={(e) => scrollTo(e, "products")}
+      >
         <Image src={playBtn} alt="playBtn" />
       </button>
     </div>

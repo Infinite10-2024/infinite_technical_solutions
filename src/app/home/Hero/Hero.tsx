@@ -5,12 +5,12 @@ import heroImg from "../../../../public/assets/img/hero/hero-img.webp";
 import heroGear from "../../../../public/assets/svg/hero/hero-gear.svg";
 import heroBottom from "../../../../public/assets/svg/hero/hero-bottom.svg";
 import Highlight from "@/app/components/Highlight";
-import ExploreButton from "./components/ExploreButton";
 import Shine from "./components/Shine";
+import ExploreButton from "./components/ExploreButton";
 
 const Hero = () => {
   return (
-    <div>
+    <div id="home">
       <div className={styles.container}>
         <div className={styles.shineRight}>
           <Shine />

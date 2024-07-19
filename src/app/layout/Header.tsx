@@ -2,15 +2,20 @@
 
 import { routes } from "@/app/routes";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./layout.module.css";
-import { usePathname } from "next/navigation";
-import Button from "../components/Button";
-import Cart from "../../../public/assets/icons/Cart";
+import { MouseEvent, useState } from "react";
+import { scrollTo } from "../utils/scroll";
 
 const Header = () => {
+  const [activePath, setActivePath] = useState<string>("home");
+
   const isCurrentPath = (path: string) => {
-    return usePathname() === path ? styles.active : "";
+    return activePath === path ? styles.active : styles.route;
+  };
+
+  const handleNavClick = (event: MouseEvent, targetId: string) => {
+    scrollTo(event, targetId);
+    setActivePath(targetId);
   };
 
   return (
@@ -20,21 +25,28 @@ const Header = () => {
         alt="main-logo"
         width={203}
         height={62}
+        onClick={(e) => handleNavClick(e, "home")}
       />
 
-      <ul className={styles.routeList}>
-        {routes.map((route) => (
-          <li key={route.path}>
-            <Link href={route.path} className={isCurrentPath(route.path)}>
+      <nav>
+        <ul className={styles.routeList}>
+          {routes.map((route) => (
+            <li
+              key={route.path}
+              className={isCurrentPath(route.path)}
+              onClick={(e) => handleNavClick(e, route.path)}
+            >
               {route.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-      <Button icon={<Cart />} type="outlined-contrast">
-        Carrito
-      </Button>
+      <div>
+        {/* <Button icon={<Cart />} type="outlined-contrast">
+          Carrito
+        </Button> */}
+      </div>
     </div>
   );
 };

@@ -2,10 +2,12 @@ import Highlight from "@/app/components/Highlight";
 import Section from "@/app/components/Section";
 import styles from "./health.module.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { motion } from "framer-motion";
 
 const Health = () => {
   return (
     <Section
+      id="health"
       title={
         <h2>
           Our <Highlight color="secondary">value offer</Highlight>
@@ -13,7 +15,13 @@ const Health = () => {
       }
     >
       <div className={styles.container}>
-        <div className={styles.info}>
+        <motion.div
+          initial={{ x: "-5%", opacity: 0.5 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.75, delay: 0.2 }}
+          viewport={{ once: true }}
+          className={styles.info}
+        >
           <h3 className={styles.title}>
             We work in the health care industry,{" "}
             <Highlight color="secondary">just like you</Highlight>.
@@ -30,15 +38,21 @@ const Health = () => {
             <p className={styles.feat}>Medical Equipment</p>
             <p className={styles.feat}>Technical service</p>
           </div>
-        </div>
-        <div className={styles.illustration}>
+        </motion.div>
+        <motion.div
+          initial={{ x: "5%", opacity: 0.5 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          exit={{ x: "5%", opacity: 0.5 }}
+          transition={{ duration: 0.75, delay: 0.2 }}
+          className={styles.illustration}
+          viewport={{ once: true }}
+        >
           <DotLottieReact
             src="assets/lottie/health/health-animation.json"
             loop
             autoplay
           />
-          {/* <Image src={illustration} alt="illustration" /> */}
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

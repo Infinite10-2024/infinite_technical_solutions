@@ -2,6 +2,7 @@ import Highlight from "@/app/components/Highlight";
 import Section from "@/app/components/Section";
 import AboutCard from "./components/AboutCard";
 import styles from "./aboutUs.module.css";
+import { motion } from "framer-motion";
 
 export type Benefit = {
   icon: string;
@@ -33,6 +34,7 @@ const AboutUs = () => {
 
   return (
     <Section
+      id="about"
       title={
         <h2>
           <Highlight color="secondary">About Us</Highlight>
@@ -47,8 +49,15 @@ const AboutUs = () => {
           help you avoid costly downtime
         </p>
         <div className={styles.grid}>
-          {benefits.map((b) => (
-            <AboutCard benefit={b} />
+          {benefits.map((b, i) => (
+            <motion.div
+              initial={{ y: "50%", opacity: 0.5 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.75, delay: i / 10 }}
+              viewport={{ once: true }}
+            >
+              <AboutCard benefit={b} />
+            </motion.div>
           ))}
         </div>
       </div>

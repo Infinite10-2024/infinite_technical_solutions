@@ -44,6 +44,7 @@ const Value = () => {
 
   return (
     <Section
+      id="value"
       title={
         <h2>
           Our <Highlight color="secondary">value offer</Highlight>
@@ -51,7 +52,13 @@ const Value = () => {
       }
     >
       <div className={styles.content}>
-        <motion.div className={styles.info}>
+        <motion.div
+          initial={{ x: "-5%", opacity: 0.5 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.75, delay: 0.1 }}
+          viewport={{ once: true }}
+          className={styles.info}
+        >
           <h3 className={styles.heading}>
             We guarantee an{" "}
             <Highlight color="secondary">agile and cost-effective</Highlight>{" "}
@@ -68,41 +75,89 @@ const Value = () => {
             <p>Technical service</p>
           </div>
         </motion.div>
-        <div className={styles.images}>
-          {images.map((img, index) => (
-            <div
-              style={{ width: activeImg === index ? "50%" : "25%" }}
-              className={styles.imageContainer}
-              onClick={() => setActiveImg(index)}
-            >
-              <Image src={img} alt={"img" + index} style={{ width: "100%" }} />
+        <motion.div
+          initial={{ x: "5%", opacity: 0.5 }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+            delay: 0.1,
+          }}
+          viewport={{ once: true }}
+          className={styles.images}
+        >
+          {images.map((img, index) => {
+            const isActiveImg = activeImg === index;
+
+            return (
               <div
-                className={styles.background}
-                style={{
-                  background:
-                    activeImg === index ? "var(--color-secondary)" : "#C9CAC9",
-                }}
-              ></div>
-              <p
-                style={{
-                  opacity: activeImg === index ? 1 : 0,
-                }}
+                style={{ width: isActiveImg ? "50%" : "25%" }}
+                className={styles.imageContainer}
+                onClick={() => setActiveImg(index)}
               >
-                High Quality
-              </p>
-            </div>
-          ))}
-        </div>
+                <Image
+                  src={img}
+                  alt={"img" + index}
+                  style={{ width: "100%" }}
+                />
+                <div
+                  className={styles.background}
+                  style={{
+                    background:
+                      activeImg === index
+                        ? "var(--color-secondary)"
+                        : "#C9CAC9",
+                  }}
+                ></div>
+                <p
+                  style={{
+                    opacity: activeImg === index ? 1 : 0,
+                  }}
+                >
+                  High Quality
+                </p>
+              </div>
+            );
+          })}
+        </motion.div>
       </div>
       <div className={styles.stripContainer}>
         <div className={styles.strip}>
           <motion.div
             animate={{
-              y: [Math.random() * 20 - 10, Math.random() * 20 - 10, 0], // Mueve en el eje Y de -10 a 10
-              x: [Math.random() * 20 - 10, Math.random() * 20 - 10, 0], // Mueve en el eje Y de -10 a 10
+              y: [
+                Math.random() * 20,
+                Math.random() * 20,
+                0,
+                Math.random() * 20,
+                Math.random() * 20,
+                0,
+                Math.random() * 20,
+                Math.random() * 20,
+                0,
+                Math.random() * 20,
+                Math.random() * 20,
+                0,
+              ],
+              x: [
+                Math.random() * 30,
+                Math.random() * 30,
+                0,
+                Math.random() * 30,
+                Math.random() * 30,
+                0,
+                Math.random() * 30,
+                Math.random() * 30,
+                0,
+                Math.random() * 30,
+                Math.random() * 30,
+                0,
+              ],
             }}
             transition={{
-              duration: 3,
+              duration: 25,
               repeat: Infinity,
               repeatType: "reverse",
               ease: "linear",

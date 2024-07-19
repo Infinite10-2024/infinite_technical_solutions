@@ -1,12 +1,12 @@
 "use client";
 
-import AboutUs from "./Home/AboutUs";
-import Contact from "./Home/Contact";
-import Health from "./Home/Health";
-import Hero from "./Home/Hero";
-import Partners from "./Home/Partners";
-import Products from "./Home/Products";
-import Value from "./Home/Value";
+import AboutUs from "./home/AboutUs";
+import Contact from "./home/Contact";
+import Health from "./home/Health";
+import Hero from "./home/Hero";
+import Partners from "./home/Partners";
+import Products from "./home/Products";
+import Value from "./home/Value";
 
 export default function Home() {
   return (

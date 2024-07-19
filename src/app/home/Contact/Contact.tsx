@@ -8,19 +8,26 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section className={styles.container}>
-      <div>
+    <section id="contact" className={styles.container}>
+      <motion.div
+        className={styles.central}
+        initial={{ x: "-5%", opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.75 }}
+      >
         <Image src={left} alt="left-img" />
-      </div>
-      <div className={styles.central}>
-        <motion.h2
-          initial={{ y: "50%", opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{duration: .5}}
-        >
+      </motion.div>
+      <motion.div
+        className={styles.central}
+        initial={{ y: "10%", opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.75 }}
+      >
+        <h2>
           Contact <Highlight color="secondary">Us</Highlight>
-        </motion.h2>
+        </h2>
         <p>
           We guarantee an agile and cost-effective actions for the operation of
           our clients businesses. You always will be receiving a personalized
@@ -32,10 +39,16 @@ const Contact = () => {
           <Button type="secondary">Make a call</Button>
           <Button type="outlined-contrast">Send an e-mail</Button>
         </div>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        className={styles.central}
+        initial={{ x: "5%", opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.75 }}
+      >
         <Image src={right} alt="right-img" />
-      </div>
+      </motion.div>
     </section>
   );
 };

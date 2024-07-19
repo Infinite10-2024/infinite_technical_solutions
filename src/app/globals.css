@@ -44,7 +44,7 @@
 
   --color-font: #1a1a1a;
   --color-font-contrast: #fff;
-  --color-font-secondary: #6e6e6e
+  --color-font-secondary: #6e6e6e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -84,6 +84,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 html,

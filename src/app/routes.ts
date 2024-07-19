@@ -1,8 +1,8 @@
-import { Route } from "./components/Layout/types";
+import { Route } from "./layout/types";
 
 export const routes: Route[] = [
-  { label: "Home", path: "/" },
-  { label: "Products and services", path: "/products" },
-  { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
+  { label: "Home", path: "home" },
+  { label: "Products and services", path: "products" },
+  { label: "About", path: "about" },
+  { label: "Contact", path: "contact" },
 ];
