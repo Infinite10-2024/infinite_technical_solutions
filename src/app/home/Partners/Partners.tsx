@@ -40,14 +40,24 @@ const Partners = () => {
         We're <Highlight color="secondary">dealers</Highlight> of:{" "}
       </motion.p>
       <div className={styles.sliderContainer}>
-        <div className={styles.slider}>
+        <motion.div
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{
+            duration: 35,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+          className={styles.slider}
+        >
           {logos.map((logo, index) => (
             <Image key={index} src={logo} alt="partner-logo" />
           ))}
           {logos.map((logo, index) => (
             <Image key={index} src={logo} alt="partner-logo" />
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

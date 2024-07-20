@@ -3,12 +3,12 @@
   bottom: 19px;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .playBtn {
   background-color: transparent;
   border-radius: 50%;
-  cursor: pointer;
   width: 70px;
   height: 70px;
   display: flex;
@@ -20,13 +20,16 @@
   transform: translate(-50%, -50%);
   padding-left: 13px;
   border: none;
+  cursor: pointer;
   outline: none;
 }
 
 .playBtn img {
-  transition: all 0.5s ease;
+  transition: all 0.75s ease;
+}
 
-  &:hover {
-    transform: rotate(360deg);
-  }
+.container:hover .playBtn img {
+  transform: rotate(240deg);
+  margin-left: -15px;
+  margin-top: -10px;
 }
