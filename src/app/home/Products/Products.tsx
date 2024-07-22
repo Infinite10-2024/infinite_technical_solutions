@@ -50,7 +50,7 @@ const Products = () => {
           className={styles.grid}
           initial={{ y: "10%", opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.75 }}
+          transition={{ delay: 0, duration: 0.75 }}
         >
           {products.slice(1, 7).map((product) => (
             <VerticalCard key={product.title?.toString()} product={product} />
