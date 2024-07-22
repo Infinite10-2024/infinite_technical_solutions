@@ -1,27 +1,32 @@
-import { ReactNode } from "react";
+import { LegacyRef, ReactNode, RefAttributes, useRef } from "react";
 import styles from "./section.module.css";
-import { motion } from "framer-motion";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+// import { useParallax } from "@/app/utils/parallax";
 
-type SectionProps = {
+interface SectionProps {
   id: string;
-  title: ReactNode;
+  title: ReactNode | string;
   children: ReactNode;
-};
+}
+
+function useParallax(value: MotionValue, distance: number) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
 
 const Section = ({ id, title, children }: SectionProps) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+
+  const y = useParallax(scrollYProgress, 250);
   return (
-    <section id={id} className={styles.container}>
-      <motion.div
-        initial={{ y: "50%", opacity: 0.5 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className={styles.heading}
-      >
+    <motion.section id={id} className={styles.container}>
+      <motion.div ref={ref} style={{ y }} className={styles.heading}>
         {title}
       </motion.div>
-      {children}
-    </section>
+      <motion.div style={{ y }} className={styles.content}>
+        {children}
+      </motion.div>
+    </motion.section>
   );
 };
 

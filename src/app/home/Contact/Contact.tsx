@@ -4,17 +4,22 @@ import left from "../../../../public/assets/img/contact/left.png";
 import right from "../../../../public/assets/img/contact/right.png";
 import Highlight from "@/app/components/Highlight";
 import Button from "@/app/components/Button";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
+import { useRef } from "react";
+import { useParallax } from "@/app/utils/parallax";
 
 const Contact = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+
+  const y = useParallax(scrollYProgress, 290);
   return (
     <section id="contact" className={styles.container}>
       <motion.div
         className={styles.central}
-        initial={{ x: "-5%", opacity: 0 }}
+        initial={{ x: "-10%", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.75 }}
+        transition={{ duration: 0.75, delay: 0.5 }}
       >
         <Image src={left} alt="left-img" />
       </motion.div>
@@ -22,8 +27,7 @@ const Contact = () => {
         className={styles.central}
         initial={{ y: "10%", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.75 }}
+        transition={{ duration: 0.75, delay: 0.5 }}
       >
         <h2>
           Contact <Highlight color="secondary">Us</Highlight>
@@ -42,10 +46,9 @@ const Contact = () => {
       </motion.div>
       <motion.div
         className={styles.central}
-        initial={{ x: "5%", opacity: 0 }}
+        initial={{ x: "10%", opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.75 }}
+        transition={{ duration: 0.75, delay: 0.5 }}
       >
         <Image src={right} alt="right-img" />
       </motion.div>

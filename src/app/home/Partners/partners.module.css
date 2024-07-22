@@ -1,6 +1,8 @@
 .container {
   text-align: center;
   margin-top: 52px;
+  margin-top: 50px;
+  transform: translateY(-290px)
 }
 
 .container p {
@@ -9,6 +11,7 @@
 }
 
 .sliderContainer {
+  background-color: #fff;
   overflow: hidden;
   position: relative;
   border: 1px solid #4b5563;
@@ -16,6 +19,7 @@
   width: 100%;
   max-width: 1440px;
   margin: auto;
+  /* margin-top: 60px; */
   height: 185px;
   display: flex;
   align-items: center;
@@ -36,7 +40,7 @@
 .slider img {
   height: 80px;
   cursor: pointer;
-  
+
   &:hover {
     transform: scale(1.1);
   }

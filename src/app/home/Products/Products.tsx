@@ -4,8 +4,8 @@ import HorizontalCard from "./components/HorizontalCard";
 import { products } from "./components/constants";
 import VerticalCard from "./components/VerticalCard";
 import Section from "@/app/components/Section";
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { ReactNode, useRef } from "react";
 
 export type Product = {
   image: string;
@@ -13,22 +13,32 @@ export type Product = {
   description: ReactNode;
 };
 
+function useParallax(value: MotionValue, distance: number) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
+
 const Products = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+
+  const y = useParallax(scrollYProgress, 300);
+
   return (
     <Section
       id="products"
       title={
-        <h2>
+        <motion.h2 >
           Products and <Highlight color="secondary">services</Highlight>
-        </h2>
+        </motion.h2>
       }
     >
       <motion.div
-        initial={{ y: "2.5%", opacity: 0.5 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        // style={{ y }}
+        // initial={{ y: "2.5%", opacity: 0.5 }}
+        // whileInView={{ y: 0, opacity: 1 }}
+        // transition={{ duration: 0.5 }}
+        // viewport={{ once: true }}
         className={styles.content}
-        viewport={{ once: true }}
       >
         <HorizontalCard product={products[0]} />
         <div className={styles.grid}>

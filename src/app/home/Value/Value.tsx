@@ -53,10 +53,9 @@ const Value = () => {
     >
       <div className={styles.content}>
         <motion.div
-          initial={{ x: "-5%", opacity: 0.5 }}
+          initial={{ x: "-10%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.75, delay: 0.1 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.75, delay: 0.3 }}
           className={styles.info}
         >
           <h3 className={styles.heading}>
@@ -76,16 +75,16 @@ const Value = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: "5%", opacity: 0.5 }}
+          initial={{ x: "10%", opacity: 0 }}
           whileInView={{
             x: 0,
             opacity: 1,
           }}
           transition={{
             duration: 1,
-            delay: 0.1,
+            delay: 0.3,
           }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           className={styles.images}
         >
           {images.map((img, index) => {

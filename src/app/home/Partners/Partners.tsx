@@ -12,7 +12,18 @@ import tpc from "../../../../public/assets/svg/partners/tpc-logo.svg";
 import vector from "../../../../public/assets/svg/partners/vector-logo.svg";
 import bienAir from "../../../../public/assets/svg/partners/bien-air-logo.svg";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useAnimationFrame,
+  useMotionValue,
+  useScroll,
+  useSpring,
+  useTransform,
+  useVelocity,
+  wrap,
+} from "framer-motion";
+import { useRef } from "react";
+import { useParallax } from "@/app/utils/parallax";
 
 const Partners = () => {
   const logos = [
@@ -29,17 +40,46 @@ const Partners = () => {
     bienAir,
   ];
 
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+
+  const y = useParallax(scrollYProgress, 290);
+
+  const baseVelocity = -5;
+  const baseX = useMotionValue(0);
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 400,
+  });
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
+    clamp: false,
+  });
+
+  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+
+  const directionFactor = useRef<number>(1);
+  useAnimationFrame((t, delta) => {
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+
+    if (velocityFactor.get() < 0) {
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
+
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+
+    baseX.set(baseX.get() + moveBy);
+  });
+
   return (
     <div className={styles.container}>
-      <motion.p
-        initial={{ y: "50%", opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
+      <motion.p ref={ref}>
         We're <Highlight color="secondary">dealers</Highlight> of:{" "}
       </motion.p>
-      <div className={styles.sliderContainer}>
+      <motion.div className={styles.sliderContainer}>
         <motion.div
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
@@ -49,6 +89,7 @@ const Partners = () => {
             repeat: Infinity,
             repeatType: "reverse",
           }}
+          // style={{ x }}
           className={styles.slider}
         >
           {logos.map((logo, index) => (
@@ -58,7 +99,7 @@ const Partners = () => {
             <Image key={index} src={logo} alt="partner-logo" />
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -16,10 +16,9 @@ const Health = () => {
     >
       <div className={styles.container}>
         <motion.div
-          initial={{ x: "-5%", opacity: 0.5 }}
+          initial={{ x: "-10%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.75, delay: 0.2 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.75, delay: 0.5 }}
           className={styles.info}
         >
           <h3 className={styles.title}>
@@ -40,12 +39,10 @@ const Health = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: "5%", opacity: 0.5 }}
+          initial={{ x: "5%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          exit={{ x: "5%", opacity: 0.5 }}
-          transition={{ duration: 0.75, delay: 0.2 }}
+          transition={{ duration: 0.75, delay: 0.5 }}
           className={styles.illustration}
-          viewport={{ once: true }}
         >
           <DotLottieReact
             src="assets/lottie/health/health-animation.json"
