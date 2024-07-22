@@ -102,8 +102,8 @@ export const products: Product[] = [
           The manufacturers we partner with prioritize comfort and durability in
           their designs
         </b>
-        , using only high-quality materials. Let's delve deeper into our
-        selection.
+        {`, using only high-quality materials. Let's delve deeper into our
+        selection.`}
       </p>
     ),
   },
@@ -137,12 +137,12 @@ export const products: Product[] = [
     ),
     description: (
       <p>
-        Our team at Infinite Technical Solutions LLC prioritizes safety within
+        {`Our team at Infinite Technical Solutions LLC prioritizes safety within
         dental practices. We specialize in high-quality technical support for
         sterilization centers and instrument washers, offering top-notch
-        supplies, resources, <b>Wand product solutions for your office</b>.
+        supplies, resources, ${(<b>Wand product solutions for your office</b>)}.
         Whether you need a short- or long-term autoclave lease during repairs or
-        while awaiting a new purchase, we've got you covered.
+        while awaiting a new purchase, we've got you covered.`}
       </p>
     ),
   },

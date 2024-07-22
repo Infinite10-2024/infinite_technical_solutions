@@ -51,6 +51,7 @@ const AboutUs = () => {
         <div className={styles.grid}>
           {benefits.map((b, i) => (
             <motion.div
+              key={b.title}
               initial={{ y: "50%", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.75, delay: (3 * (i + 1)) / 10 }}

@@ -21,7 +21,7 @@ const Value = () => {
       title: "Optimal performance",
       description: (
         <p>
-          "In all dental and <br /> medical equipment <br /> repair."
+          In all dental and <br /> medical equipment <br /> repair.
         </p>
       ),
     },
@@ -92,6 +92,7 @@ const Value = () => {
 
             return (
               <div
+                key={index}
                 style={{ width: isActiveImg ? "50%" : "25%" }}
                 className={styles.imageContainer}
                 onClick={() => setActiveImg(index)}

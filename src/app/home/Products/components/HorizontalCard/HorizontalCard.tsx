@@ -18,7 +18,7 @@ const HorizontalCard = ({ product }: HorizontalCardProps) => {
       <div className={styles.info}>
         <div className={styles.title}>{title}</div>
         <div className={styles.description}>{description}</div>
-        <Button type="secondary">I'm interested</Button>
+        <Button type="secondary">{`I'm interested`}</Button>
       </div>
     </div>
   );

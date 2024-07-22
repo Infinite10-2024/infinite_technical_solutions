@@ -13,12 +13,12 @@ const VerticalCard = ({ product }: VerticalCardProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <Image src={image} alt="image" fill/>
+        <Image src={image} alt="image" fill />
       </div>
       <div className={styles.info}>
         <div className={styles.title}>{title}</div>
         <div className={styles.description}>{description}</div>
-        <Button type="secondary">I'm interested</Button>
+        <Button type="secondary">{`I'm interested`}</Button>
       </div>
     </div>
   );
