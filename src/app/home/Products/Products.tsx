@@ -27,25 +27,35 @@ const Products = () => {
     <Section
       id="products"
       title={
-        <motion.h2 >
+        <motion.h2>
           Products and <Highlight color="secondary">services</Highlight>
         </motion.h2>
       }
     >
       <motion.div
-        // style={{ y }}
         // initial={{ y: "2.5%", opacity: 0.5 }}
         // whileInView={{ y: 0, opacity: 1 }}
         // transition={{ duration: 0.5 }}
         // viewport={{ once: true }}
         className={styles.content}
       >
-        <HorizontalCard product={products[0]} />
-        <div className={styles.grid}>
+        <motion.div
+          initial={{ x: "-10%", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.75 }}
+        >
+          <HorizontalCard product={products[0]} />
+        </motion.div>
+        <motion.div
+          className={styles.grid}
+          initial={{ y: "10%", opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.75, duration: 0.75 }}
+        >
           {products.slice(1, 7).map((product) => (
             <VerticalCard key={product.title?.toString()} product={product} />
           ))}
-        </div>
+        </motion.div>
         <div className={styles.slider}>
           {products.slice(7, products.length).map((product) => (
             <HorizontalCard key={product.title?.toString()} product={product} />
