@@ -2,6 +2,8 @@
   font-size: 24px;
   color: var(--color-font-secondary);
   text-align: center;
+  margin-top: -150px;
+  margin-bottom: 160px;
 }
 
 .description b {

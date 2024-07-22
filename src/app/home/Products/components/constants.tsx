@@ -73,7 +73,7 @@ export const products: Product[] = [
     image: "/assets/img/products/5.png",
     title: (
       <p>
-        Medical, Dental, and Hospital parts and
+        Medical, Dental, and Hospital parts and{" "}
         <Highlight color="secondary">Equipment Supplies Merchant</Highlight>.
       </p>
     ),

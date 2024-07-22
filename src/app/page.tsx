@@ -18,7 +18,7 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           transform: "translateY(290px)",
-          gap: 60,
+          gap: 80,
         }}
       >
         <Partners />

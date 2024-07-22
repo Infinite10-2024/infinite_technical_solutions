@@ -20,7 +20,14 @@ const Section = ({ id, title, children }: SectionProps) => {
   const y = useParallax(scrollYProgress, 250);
   return (
     <motion.section id={id} className={styles.container}>
-      <motion.div ref={ref} style={{ y }} className={styles.heading}>
+      <motion.div
+        ref={ref}
+        style={{ y }}
+        className={styles.heading}
+        initial={{ opacity: 0.8 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
         {title}
       </motion.div>
       <motion.div style={{ y }} className={styles.content}>
