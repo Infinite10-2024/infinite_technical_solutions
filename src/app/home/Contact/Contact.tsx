@@ -4,30 +4,38 @@ import left from "../../../../public/assets/img/contact/left.png";
 import right from "../../../../public/assets/img/contact/right.png";
 import Highlight from "@/app/components/Highlight";
 import Button from "@/app/components/Button";
-import { motion, useScroll } from "framer-motion";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useParallax } from "@/app/utils/parallax";
+
+function useParallax2(value: MotionValue, distance: number) {
+  return useTransform(value, [1, 0], [-distance, distance]);
+}
 
 const Contact = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
-  const y = useParallax(scrollYProgress, 290);
+  const y = useParallax(scrollYProgress, 100);
+  const y2 = useParallax2(scrollYProgress, 25);
   return (
     <section id="contact" className={styles.container}>
       <motion.div
-        className={styles.central}
-        initial={{ x: "-10%", opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        className={styles.img}
+        style={{ y: y2 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.5 }}
       >
         <Image src={left} alt="left-img" />
       </motion.div>
       <motion.div
+        ref={ref}
         className={styles.central}
-        initial={{ y: "10%", opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.5 }}
+        style={{ y }}
       >
         <h2>
           Contact <Highlight color="secondary">Us</Highlight>
@@ -45,9 +53,10 @@ const Contact = () => {
         </div>
       </motion.div>
       <motion.div
-        className={styles.central}
-        initial={{ x: "10%", opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        className={styles.img}
+        style={{ y: y2 }}
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.75, delay: 0.5 }}
       >
         <Image src={right} alt="right-img" />
