@@ -34,7 +34,7 @@ const Contact = () => {
         className={styles.central}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.75, delay: 0.5 }}
+        transition={{ duration: 0.75 }}
         style={{ y }}
       >
         <h2>
