@@ -37,27 +37,14 @@ const Products = () => {
         </motion.h2>
       }
     >
-      <motion.div
-        // initial={{ y: "2.5%", opacity: 0.5 }}
-        // whileInView={{ y: 0, opacity: 1 }}
-        // transition={{ duration: 0.5 }}
-        // viewport={{ once: true }}
-
-        className={styles.content}
-      >
-        <motion.div
-          // initial={{ x: "-10%", opacity: 0 }}
-          // whileInView={{ x: 0, opacity: 1 }}
-          // transition={{ duration: 0.75, delay: 0.5 }}
-          ref={ref}
-          style={{ y: y2 }}
-        >
+      <motion.div className={styles.content}>
+        <motion.div ref={ref} style={{ y: y2 }}>
           <HorizontalCard product={products[0]} />
         </motion.div>
         <motion.div
           className={styles.grid}
-          initial={{ y: "10%", opacity: 0 }}
-          whileInView={{ y: 30, opacity: 1 }}
+          initial={{ y: "5%", opacity: 0 }}
+          whileInView={{ y: 14, opacity: 1 }}
           transition={{ delay: -0.2, duration: 0.75 }}
         >
           {products.slice(1, 7).map((product) => (

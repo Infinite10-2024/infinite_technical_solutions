@@ -40,7 +40,7 @@ const AboutUs = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
-  const y2 = useParallax2(scrollYProgress, 150);
+  const y2 = useParallax2(scrollYProgress, 200);
 
   return (
     <Section
@@ -52,7 +52,14 @@ const AboutUs = () => {
       }
     >
       <div>
-        <motion.p ref={ref} style={{ y: y2 }} className={styles.description}>
+        <motion.p
+          ref={ref}
+          style={{ y: y2 }}
+          className={styles.description}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.75, delay: 0.75 }}
+        >
           We have the best reliable and well-trained Service Technicians because
           we know{" "}
           <b>how important it is to keep your equipment running smoothly</b> to
