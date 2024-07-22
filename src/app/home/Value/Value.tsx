@@ -81,10 +81,9 @@ const Value = () => {
             opacity: 1,
           }}
           transition={{
-            duration: 1,
+            duration: 0.75,
             delay: 0.3,
           }}
-          // viewport={{ once: true }}
           className={styles.images}
         >
           {images.map((img, index) => {
@@ -123,7 +122,12 @@ const Value = () => {
           })}
         </motion.div>
       </div>
-      <div className={styles.stripContainer}>
+      <motion.div
+        className={styles.stripContainer}
+        initial={{ y: "10%", opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0, duration: 0.75 }}
+      >
         <div className={styles.strip}>
           <motion.div
             animate={{
@@ -174,7 +178,7 @@ const Value = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 };

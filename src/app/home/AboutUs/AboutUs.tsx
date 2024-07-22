@@ -54,8 +54,7 @@ const AboutUs = () => {
               key={b.title}
               initial={{ y: "50%", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.75, delay: (3 * (i + 1)) / 10 }}
-              // viewport={{ once: true }}
+              transition={{ duration: 0.75, delay: (2 * (i + 1)) / 10 }}
             >
               <AboutCard benefit={b} />
             </motion.div>
