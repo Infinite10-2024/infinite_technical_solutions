@@ -18,7 +18,12 @@ const Hero = () => {
           <Shine />
         </div>
         <div className={styles.content}>
-          <div className={styles.info}>
+          <motion.div
+            initial={{ x: "-10%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.75 }}
+            className={styles.info}
+          >
             <div>
               <h1 className={styles.title}>
                 We’re <Highlight>more</Highlight> than a supplier or technical
@@ -45,8 +50,13 @@ const Hero = () => {
                 <Button type="outlined">Trust Us</Button>
               </div>
             </div>
-          </div>
-          <div className={styles.assets}>
+          </motion.div>
+          <motion.div
+            initial={{ x: "10%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.75, delay: 0.3 }}
+            className={styles.assets}
+          >
             <div className={styles.assetsRow1}>
               <div className={styles.redCube}>
                 <div className={styles.redCubeContent}>
@@ -63,11 +73,6 @@ const Hero = () => {
                     Infinite Technical Solutions, <br /> guarantee
                   </p>
                 </div>
-                {/* <Image
-                  src={heroImg}
-                  alt="hero-img"
-                  className={styles.heroImg}
-                ></Image> */}
               </div>
             </div>
             <div className={styles.assetsRow2}>
@@ -75,7 +80,7 @@ const Hero = () => {
                 <Image src={consultingRoom} alt="consulting-room"></Image>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className={styles.shineLeft}>
           <Shine />
