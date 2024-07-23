@@ -1,9 +1,13 @@
 import { MouseEvent } from "react";
 
-export const scrollTo = (event: MouseEvent, targetId: string) => {
+export const scrollTo = (event: MouseEvent, targetId: string, offsetPixels: number = 290) => {
   event.preventDefault();
   const targetElement = document.getElementById(targetId);
   if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth" });
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    window.scrollTo({
+      top: targetPosition - offsetPixels,
+      behavior: "smooth",
+    });
   }
 };
