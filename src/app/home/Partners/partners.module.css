@@ -8,6 +8,7 @@
 .container p {
   font-size: clamp(40px, 6vw, 48px);
   margin-bottom: 34px;
+  font-weight: 500;
 }
 
 .sliderContainer {

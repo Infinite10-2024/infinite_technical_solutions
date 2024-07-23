@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bai_Jamjuree } from "next/font/google";
 import "./globals.css";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import styles from "./layout/layout.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const baiJamjuree = Bai_Jamjuree({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["thai"],
+});
 
 export const metadata: Metadata = {
   title: "Infinite Technichal Solutions",
@@ -19,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={baiJamjuree.className}>
         <Header />
         <div className={styles.container}>{children}</div>
         <Footer />

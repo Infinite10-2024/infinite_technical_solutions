@@ -46,8 +46,8 @@ const Contact = () => {
         </h3>
         <p>
           We guarantee an agile and cost-effective actions for the operation of
-          our clients businesses. You always will be receiving a personalized
-          service.
+          our clients businesses.{" "}
+          <b>You always will be receiving a personalized service. </b>
         </p>
         <div className={styles.btnsRow}>
           <Button type="primary">Fill form</Button>
