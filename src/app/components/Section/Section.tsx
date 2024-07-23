@@ -1,7 +1,6 @@
-import { LegacyRef, ReactNode, RefAttributes, useRef } from "react";
+import { ReactNode, useRef } from "react";
 import styles from "./section.module.css";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-// import { useParallax } from "@/app/utils/parallax";
 
 interface SectionProps {
   id: string;
