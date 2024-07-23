@@ -8,6 +8,7 @@ import Highlight from "@/app/components/Highlight";
 import Shine from "./components/Shine";
 import ExploreButton from "./components/ExploreButton";
 import consultingRoom from "../../../../public/assets/img/hero/consulting-room.webp";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -71,7 +72,13 @@ const Hero = () => {
         <div className={styles.shineLeft}>
           <Shine />
         </div>
-        <Image src={heroGear} alt="gear" className={styles.gear} />
+        <motion.div
+          className={styles.gear}
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
+        >
+          <Image src={heroGear} alt="gear" />
+        </motion.div>
       </div>
       <div className={styles.bottom}>
         <ExploreButton />
