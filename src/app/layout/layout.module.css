@@ -136,3 +136,14 @@
     padding-inline: 32px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .footerRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerContent img {
+    max-width: 100%;
+  }
+}

@@ -1,7 +1,6 @@
 import styles from "./layout.module.css";
 import logo from "../../../public/assets/svg/contrast-logo.svg";
 import Image from "next/image";
-import Link from "next/link";
 
 const Footer = () => {
   return (

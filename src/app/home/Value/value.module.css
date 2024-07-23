@@ -14,12 +14,12 @@
 }
 
 .heading {
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(32px, 6vw, 64px);
   font-weight: 500;
 }
 
 .description {
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 24px);
   color: var(--color-font-secondary);
 }
 
@@ -109,7 +109,7 @@
 .stripImgContainer {
   position: absolute;
   transform: rotate(8deg) scale(1.2) translate(50%, 50%);
-  bottom: 0;
+  bottom: -15px;
   left: 10%;
 }
 
@@ -150,7 +150,15 @@
     width: 250px;
     height: 310px;
     transform: scale(1.5) rotate(-10deg) translateY(-20%);
-    
+  }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 900px) {
+  .strip img {
+    flex: 1;
+    width: 250px;
+    height: 310px;
+    transform: scale(2) rotate(-10deg) translate(15%, -35%) !important;
   }
 }
 
@@ -158,41 +166,74 @@
   .stripTextContainer {
     flex-direction: column;
     flex: 3;
-    align-items: center;
+    margin-left: 0;
+    margin-left: 0;
+    align-items: flex-end;
+    margin-right: 40px;
   }
 
   .stripContainer {
-    padding: 0;
-    margin-top: 60px;
+    padding: 0 0;
+    margin-top: 40px;
+    border-radius: 20px;
+  }
+
+  .strip {
+    border-radius: 20px;
+    margin: 0;
+  }
+
+  .images {
+    gap: 16px;
   }
 
   .strip img {
-    position: relative;
-    top: 50%;
-    flex: 1;
-    width: 250px;
-    height: 310px;
     transform: scale(2) rotate(-10deg) translateY(-35%);
-    margin-left: -50px;
   }
 }
 
 @media screen and (max-width: 700px) {
   .content {
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: flex-end;
     gap: 24px;
+  }
+
+  .stripImgContainer {
+    left: -15%;
   }
 
   .images {
     max-width: 100%;
   }
 
+  .stripContainer {
+    padding: 50px 0px;
+  }
+
   .strip {
-    padding: 35px 14px;
+    padding: 35px 0px;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
     border-radius: 8px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .row {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .stripImgContainer {
+    display: none;
+  }
+
+  .stripTextContainer {
+    align-items: center;
+    margin: 0;
+    padding: 16px;
   }
 }

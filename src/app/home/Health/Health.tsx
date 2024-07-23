@@ -45,7 +45,7 @@ const Health = () => {
           className={styles.illustration}
         >
           <DotLottieReact
-            src="assets/lottie/health/health-animation.json"
+            src="/assets/lottie/health/health-animation.json"
             loop
             autoplay
           />

@@ -1,9 +1,10 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 1330px;
   margin: auto;
-  margin-top: -30px;
+  margin-top: -90px;
   margin-bottom: 290px;
   gap: 40px;
 }
@@ -16,12 +17,17 @@
 }
 
 .central h2 {
-  font-size: 48px;
+  font-size: clamp(40px, 6vw, 48px);
   font-weight: 600;
 }
 
+.central h3 {
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 500;
+}
+
 .central p {
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 24px);
   color: #191919;
   font-weight: 500;
 }
@@ -38,11 +44,29 @@
 
 .img {
   margin-top: -130px;
+  flex: 1;
 }
 
 .img img {
   max-width: 300px;
   max-height: 300px;
   object-fit: contain;
-  
+}
+
+@media screen and (max-width: 900px) {
+  .img {
+    display: none;
+  }
+
+  .btnsRow {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .btnsRow button {
+    justify-content: center;
+    width: 100%;
+    padding-block: 12px;
+    font-size: 24px;
+  }
 }

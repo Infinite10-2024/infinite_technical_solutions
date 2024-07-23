@@ -40,12 +40,15 @@ const Contact = () => {
         <h2>
           Contact <Highlight color="secondary">Us</Highlight>
         </h2>
+        <h3 className={styles.title}>
+          We love our customers,{" "}
+          <Highlight color="secondary">feel free to contact us</Highlight>.
+        </h3>
         <p>
           We guarantee an agile and cost-effective actions for the operation of
           our clients businesses. You always will be receiving a personalized
           service.
         </p>
-        <h3>We love our clients</h3>
         <div className={styles.btnsRow}>
           <Button type="primary">Fill form</Button>
           <Button type="secondary">Make a call</Button>

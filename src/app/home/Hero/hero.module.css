@@ -266,7 +266,7 @@
 @media (max-width: 720px) {
   .container {
     padding-top: 100px;
-    padding-inline: 34px;
+    padding-inline: 56px;
   }
 
   .content {
@@ -275,5 +275,11 @@
 
   .redCube {
     padding-inline: 28px 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .gear {
+    display: none;
   }
 }

@@ -1,22 +1,22 @@
 .container {
   display: flex;
-  gap: 104px;
+  flex-wrap: wrap-reverse;
 }
 
 .info {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 630px;
+  flex: 4;
 }
 
 .title {
-  font-size: 64px;
+  font-size: clamp(32px, 6vw, 64px);
   font-weight: 500;
 }
 
 .description {
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 24px);
   color: var(--color-font-secondary);
 }
 
@@ -39,4 +39,50 @@
 
 .illustration {
   max-height: 500px;
+  flex: 3;
+}
+
+.illustration canvas {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 400px !important;
+  }
+
+  .illustration canvas {
+    max-height: none;
+    height: 500px !important;
+  }
+
+  .info {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .feats {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .illustration {
+    max-height: 300px !important;
+  }
+
+  .illustration canvas {
+    max-height: none;
+    height: 400px !important;
+  }
 }
