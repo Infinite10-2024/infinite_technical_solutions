@@ -45,6 +45,9 @@
   --color-font: #1a1a1a;
   --color-font-contrast: #fff;
   --color-font-secondary: #6e6e6e;
+
+  --swiper-navigation-color: var(--color-secondary);
+  --swiper-pagination-color: var(--color-secondary);
 }
 
 @media (prefers-color-scheme: dark) {
