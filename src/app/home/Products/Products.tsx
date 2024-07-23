@@ -6,6 +6,11 @@ import VerticalCard from "./components/VerticalCard";
 import Section from "@/app/components/Section";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { ReactNode, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 export type Product = {
   image: string;
@@ -51,11 +56,26 @@ const Products = () => {
             <VerticalCard key={product.title?.toString()} product={product} />
           ))}
         </motion.div>
-        <div className={styles.slider}>
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className={styles.swiper}
+        >
           {products.slice(7, products.length).map((product) => (
-            <HorizontalCard key={product.title?.toString()} product={product} />
+            <SwiperSlide key={product.title?.toString()}>
+              <HorizontalCard product={product} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </motion.div>
     </Section>
   );
