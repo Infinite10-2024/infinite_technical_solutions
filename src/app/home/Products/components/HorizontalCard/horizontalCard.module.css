@@ -35,4 +35,20 @@
 
 .image img {
   border-radius: 20px;
+  object-fit: cover;
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .image img {
+    width: 100%;
+  }
+}
+

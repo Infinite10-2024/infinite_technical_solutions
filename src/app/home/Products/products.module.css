@@ -14,3 +14,26 @@
   max-width: 100%;
   height: max-content;
 }
+
+.mobileContent {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mobileContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    overflow-x: auto;
+  }
+
+  .content {
+    display: none;
+  }
+}

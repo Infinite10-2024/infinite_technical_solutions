@@ -42,3 +42,10 @@
 .info button {
   width: fit-content;
 }
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 318px;
+    padding: 16px;
+  }
+}

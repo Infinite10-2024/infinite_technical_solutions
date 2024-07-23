@@ -130,6 +130,7 @@ const Value = () => {
       >
         <div className={styles.strip}>
           <motion.div
+            className={styles.stripImgContainer}
             animate={{
               y: [
                 Math.random() * 20,

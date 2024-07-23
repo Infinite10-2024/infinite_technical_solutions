@@ -16,3 +16,22 @@
   gap: 125px;
   margin-top: 25px;
 }
+
+.benefit {
+  flex: 1;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    gap: 60px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid {
+    margin-top: 32px;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

@@ -54,7 +54,7 @@ const Header = () => {
         </div>
         <div
           style={{
-            transform: showMenu ? "translateX(0)" : "translateX(-70vw)",
+            transform: showMenu ? "translateX(0)" : "translateX(-75vw)",
             opacity: showMenu ? 1 : 0.5,
           }}
           className={styles.mobileMenuContainer}

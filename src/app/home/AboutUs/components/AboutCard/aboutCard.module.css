@@ -1,21 +1,27 @@
 .container {
-    padding: 32px;
-    border: 1px solid #c9c9c9;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    max-width: 340px;
+  padding: 32px;
+  border: 1px solid #c9c9c9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
 }
 
 .title {
-    font-size: 32px;
-    color: #191919;
-    margin-top: 20px;
-    margin-bottom: 8px;
+  font-size: 32px;
+  color: #191919;
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
 .description {
-    font-size: 18px;
-    color: var(--color-font-secondary);
-    margin-top: 8px;
+  font-size: 18px;
+  color: var(--color-font-secondary);
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: none;
+  }
 }

@@ -37,12 +37,12 @@ const Products = () => {
     <Section
       id="products"
       title={
-        <motion.h2>
+        <h2>
           Products and <Highlight color="secondary">services</Highlight>
-        </motion.h2>
+        </h2>
       }
     >
-      <motion.div className={styles.content}>
+      <div className={styles.content}>
         <motion.div ref={ref} style={{ y: y2 }}>
           <HorizontalCard product={products[0]} />
         </motion.div>
@@ -77,6 +77,18 @@ const Products = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <motion.div
+        className={styles.mobileContent}
+        ref={ref}
+        style={{ y: y2 }}
+        initial={{ y: "5%", opacity: 0 }}
+        whileInView={{ y: 14, opacity: 1 }}
+        transition={{ delay: -0.2, duration: 0.75 }}
+      >
+        {products.map((product) => (
+          <VerticalCard key={product.title?.toString()} product={product} />
+        ))}
       </motion.div>
     </Section>
   );
