@@ -74,4 +74,5 @@
   gap: 24px;
   color: var(--color-font-contrast);
   font-size: 24px;
+  list-style: none;
 }
