@@ -26,8 +26,8 @@ export const products: Product[] = [
       <p>
         We offer CIT and Traditional Technical Support for Dental, Medical and
         Veterinarian Offices.{" "}
-        <b>We offer a Mechanical Room Maintenance Program.</b>
-        We maintain and fix high-speed, electric, and low-speed handpieces.
+        <b>We offer a Mechanical Room Maintenance Program.</b> We maintain and
+        fix high-speed, electric, and low-speed handpieces.
       </p>
     ),
   },
@@ -63,9 +63,8 @@ export const products: Product[] = [
     description: (
       <p>
         Our products offer precise results and are crafted from top-notch
-        materials.
-        <b>Explore our variety of dental lab supplies</b>, such as acrylics,
-        waxes, and impression materials.
+        materials. <b>Explore our variety of dental lab supplies</b>, such as
+        acrylics, waxes, and impression materials.
       </p>
     ),
   },

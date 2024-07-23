@@ -161,6 +161,22 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    background: rgb(13, 15, 100);
+    background: linear-gradient(
+      180deg,
+      rgba(13, 15, 100, 1) 0%,
+      rgba(20, 23, 149, 1) 70%
+    );
+  }
+
+  .shineLeft {
+    bottom: 100px;
+    left: -600px;
+  }
+}
+
 @media screen and (min-width: 970px) and (max-width: 1060px) {
   .info {
     padding-bottom: 64px;
@@ -193,6 +209,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 170px;
+    z-index: 0;
   }
 
   .info {
@@ -241,7 +258,8 @@
   }
 
   .gear {
-    max-width: 200px;
+    bottom: -300px;
+    right: -300px;
   }
 }
 

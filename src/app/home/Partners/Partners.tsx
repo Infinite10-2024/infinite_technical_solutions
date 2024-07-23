@@ -77,7 +77,7 @@ const Partners = () => {
   return (
     <div className={styles.container}>
       <motion.p ref={ref}>
-        We&rsquo;sre <Highlight color="secondary">dealers</Highlight> of:
+        We&rsquo;re <Highlight color="secondary">dealers</Highlight> of:
       </motion.p>
       <motion.div className={styles.sliderContainer}>
         <motion.div
