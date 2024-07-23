@@ -59,7 +59,7 @@ const Partners = () => {
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{
-            duration: 35,
+            duration: 20,
             ease: "linear",
             repeat: Infinity,
             repeatType: "reverse",
@@ -74,7 +74,7 @@ const Partners = () => {
           initial={{ x: 0 }}
           animate={{ x: "100%" }}
           transition={{
-            duration: 35,
+            duration: 20,
             ease: "linear",
             repeat: Infinity,
             repeatType: "reverse",

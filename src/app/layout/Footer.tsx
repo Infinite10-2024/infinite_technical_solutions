@@ -1,6 +1,7 @@
 import styles from "./layout.module.css";
 import logo from "../../../public/assets/svg/contrast-logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -9,14 +10,14 @@ const Footer = () => {
         <Image src={logo} alt="footer-logo" />
         <ul className={styles.footerRow}>
           <li>
-            <a target="_blank" href="docs/Privacy_Policy_ITS.pdf">
+            <Link target="_blank" href="docs/Privacy_Policy_ITS.pdf">
               Privacy Policy
-            </a>
+            </Link>
           </li>
           <li>
-            <a target="_blank" href="docs/Terms_&_Conditions_ITS.pdf">
+            <Link target="_blank" href="docs/Terms_&_Conditions_ITS.pdf">
               Terms & Conditions
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

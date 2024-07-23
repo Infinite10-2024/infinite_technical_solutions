@@ -17,7 +17,7 @@ export default function Home() {
         style={{
           display: "flex",
           flexDirection: "column",
-          transform: "translateY(290px)",
+          transform: "translateY(270px)",
           gap: 80,
         }}
       >

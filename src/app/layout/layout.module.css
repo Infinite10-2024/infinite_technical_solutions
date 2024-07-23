@@ -110,6 +110,10 @@
   border: none;
 }
 
+.mobileRouteList a {
+  height: 30px;
+}
+
 .mobileMenuCloseIcon {
   position: absolute;
   top: 0;
@@ -119,6 +123,8 @@
 @media (max-width: 900px) {
   .headerContainer {
     flex-direction: row-reverse;
+    padding-right: 32px;
+    padding-left: 24px;
   }
 
   .headerContainer nav,
@@ -128,6 +134,10 @@
 
   .mobileMenu {
     display: block;
+  }
+
+  .footerRow li {
+    font-size: 20px;
   }
 }
 

@@ -48,4 +48,9 @@
     width: 318px;
     padding: 16px;
   }
+
+  .info button {
+    width: 100%;
+    justify-content: center;
+  }
 }

@@ -42,7 +42,7 @@
 }
 
 .text {
-  font-size: clamp(16px, 3vw, 24px);
+  font-size: clamp(16px, 4vw, 24px);
 }
 
 .cta {
@@ -52,7 +52,7 @@
 
 .assets {
   flex: 1;
-  max-width: 527px;
+  width: 527px;
 }
 
 .assetsRow1 {
@@ -60,21 +60,35 @@
   gap: 24px;
 }
 
-.redCube {
-  background-color: var(--color-primary);
-  padding: 48px 32px;
+.redCube,
+.blueCube {
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.redCube {
+  flex: 2;
+  background-color: var(--color-primary);
+  padding: 32px;
+}
+
+.blueCube {
+  flex: 3;
+  background-color: var(--color-secondary);
+  padding: 32px 48px;
 }
 
 .assetHeading {
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 700;
-  min-width: 140px;
 }
 
 .assetText {
   font-size: clamp(10px, 3.5vw, 18px);
   font-weight: 500;
+  max-width: 170px;
 }
 
 .assetsRow2 {
@@ -153,7 +167,7 @@
   }
 
   .assets {
-    max-width: 400px;
+    max-width: 527px;
   }
 
   .redCube {
@@ -228,9 +242,14 @@
   }
 
   .redCube {
-    flex: 1;
+    flex: 2;
+    padding-inline: 28px 20px;
     display: flex;
     align-items: center;
+  }
+
+  .blueCube {
+    padding-inline: 32px;
   }
 
   .cta {
@@ -273,13 +292,22 @@
     gap: 32px;
   }
 
-  .redCube {
-    padding-inline: 28px 20px;
+  .assetText {
+    font-size: 12px;
+  }
+
+  .assetsRow1 {
+    display: flex;
+    gap: 12px;
+  }
+
+  .gear {
+    display: none;
   }
 }
 
-@media (max-width: 720px) {
-  .gear {
-    display: none;
+@media (max-width: 500px) {
+  .redCube {
+    flex: 3;
   }
 }
