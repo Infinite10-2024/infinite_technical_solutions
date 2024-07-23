@@ -11,6 +11,7 @@
 .info {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 24px;
 }
 
@@ -22,7 +23,7 @@
 .description p {
   font-size: 24px;
   color: var(--color-font-secondary);
-  width: 780px;
+  width: 100%;
 }
 
 .description b {
@@ -31,4 +32,8 @@
 
 .info button {
   width: fit-content;
+}
+
+.image img {
+  border-radius: 20px;
 }

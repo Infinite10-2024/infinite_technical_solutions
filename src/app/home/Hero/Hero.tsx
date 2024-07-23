@@ -7,6 +7,7 @@ import heroBottom from "../../../../public/assets/svg/hero/hero-bottom.svg";
 import Highlight from "@/app/components/Highlight";
 import Shine from "./components/Shine";
 import ExploreButton from "./components/ExploreButton";
+import consultingRoom from "../../../../public/assets/img/hero/consulting-room.webp";
 
 const Hero = () => {
   return (
@@ -62,10 +63,7 @@ const Hero = () => {
             </div>
             <div className={styles.assetsRow2}>
               <div className={styles.whiteCube}>
-                <p className={styles.assetHeading}>1 year</p>
-                <p className={styles.assetText}>
-                  Infinite Technical Solutions, guarantee
-                </p>
+                <Image src={consultingRoom} alt="consulting-room"></Image>
               </div>
             </div>
           </div>

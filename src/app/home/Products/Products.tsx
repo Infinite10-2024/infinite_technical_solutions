@@ -1,7 +1,7 @@
 import Highlight from "@/app/components/Highlight";
 import styles from "./products.module.css";
 import HorizontalCard from "./components/HorizontalCard";
-import { products } from "./components/constants";
+import { products } from "./constants";
 import VerticalCard from "./components/VerticalCard";
 import Section from "@/app/components/Section";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";

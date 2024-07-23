@@ -80,7 +80,6 @@
   margin-top: 16px;
   background-color: #fff;
   color: var(--color-secondary);
-  padding-block: 40px;
   border-radius: 20px;
 }
 
@@ -97,7 +96,14 @@
   display: flex;
   gap: 34px;
   align-items: center;
-  padding-inline: 80px;
+  border-radius: 20px;
+}
+
+.whiteCube img {
+  max-width: 100%;
+  max-height: 211px;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .gear {
@@ -150,10 +156,6 @@
 
   .redCube {
     padding: 32px 24px;
-  }
-
-  .whiteCube {
-    padding-inline: 24px;
   }
 }
 
@@ -252,6 +254,6 @@
   }
 
   .redCube {
-    padding-inline: 28px 20px 
+    padding-inline: 28px 20px;
   }
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./contact.module.css";
-import left from "../../../../public/assets/img/contact/left.png";
+import left from "../../../../public/assets/img/contact/left.webp";
 import right from "../../../../public/assets/img/contact/right.png";
 import Highlight from "@/app/components/Highlight";
 import Button from "@/app/components/Button";

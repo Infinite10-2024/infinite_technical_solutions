@@ -40,7 +40,7 @@ const AboutUs = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
-  const y2 = useParallax2(scrollYProgress, 200);
+  const y2 = useParallax2(scrollYProgress, 40);
 
   return (
     <Section
@@ -58,7 +58,7 @@ const AboutUs = () => {
           className={styles.description}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.75, delay: 0.75 }}
+          transition={{ duration: 0.75, delay: 0.2 }}
         >
           We have the best reliable and well-trained Service Technicians because
           we know{" "}
