@@ -7,7 +7,6 @@ import Hero from "./home/Hero";
 import Partners from "./home/Partners";
 import Products from "./home/Products";
 import Value from "./home/Value";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (

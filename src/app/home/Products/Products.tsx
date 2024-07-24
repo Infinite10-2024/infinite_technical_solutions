@@ -30,7 +30,6 @@ const Products = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
-  const y = useParallax(scrollYProgress, 300);
   const y2 = useParallax2(scrollYProgress, 30);
 
   return (
@@ -59,6 +58,7 @@ const Products = () => {
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
+          speed={750}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
