@@ -28,12 +28,8 @@ const VerticalCard = ({ product }: VerticalCardProps) => {
         <motion.div className={styles.title} ref={ref} style={{ y }}>
           {title}
         </motion.div>
-        <motion.div className={styles.description} style={{ y }}>
-          {description}
-        </motion.div>
-        <motion.div style={{ y }}>
-          <Button type="secondary">{`I'm interested`}</Button>
-        </motion.div>
+        <motion.div className={styles.description}>{description}</motion.div>
+        <Button type="secondary">{`I'm interested`}</Button>
       </div>
     </div>
   );

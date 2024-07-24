@@ -7,7 +7,7 @@ import Image from "next/image";
 import img1 from "../../../../public/assets/img/value/1.webp";
 import img2 from "../../../../public/assets/img/value/2.webp";
 import img3 from "../../../../public/assets/img/value/3.webp";
-import stripImg from "../../../../public/assets/img/value/microscope.webp";
+import stripImg from "../../../../public/assets/img/value/lamp.png";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -172,10 +172,16 @@ const Value = () => {
           </motion.div>
           <div className={styles.stripTextContainer}>
             {stripInfo.map((info, index) => (
-              <div key={index} className={styles.stripText}>
+              <motion.div
+                initial={{ y: "25%", opacity: 0.5 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.75, delay: (index * 2) / 10 }}
+                key={index}
+                className={styles.stripText}
+              >
                 <div className={styles.stripHeading}>{info.title}</div>
                 <p className={styles.stripDescription}>{info.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

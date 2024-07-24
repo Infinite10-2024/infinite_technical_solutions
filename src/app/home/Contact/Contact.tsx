@@ -7,6 +7,7 @@ import Button from "@/app/components/Button";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useParallax } from "@/app/utils/parallax";
+import Link from "next/link";
 
 function useParallax2(value: MotionValue, distance: number) {
   return useTransform(value, [1, 0], [-distance, distance]);
@@ -51,8 +52,16 @@ const Contact = () => {
         </p>
         <div className={styles.btnsRow}>
           <Button type="primary">Fill form</Button>
-          <Button type="secondary">Make a call</Button>
-          <Button type="outlined-contrast">Send an e-mail</Button>
+          <Button type="secondary">
+            <Link target="_blank" href="tel:+3012890029">
+              Make a call
+            </Link>
+          </Button>
+          <Button type="outlined-contrast">
+            <Link target="_blank" href="mailto:luismoreno785@gmail.com">
+              Send an e-mail
+            </Link>
+          </Button>
         </div>
       </motion.div>
       <motion.div

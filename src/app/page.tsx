@@ -18,6 +18,8 @@ export default function Home() {
           flexDirection: "column",
           transform: "translateY(270px)",
           gap: 170,
+          maxWidth: 1338,
+          margin: "auto",
         }}
       >
         <Partners />

@@ -14,7 +14,7 @@ export const products: Product[] = [
       "We offer a variety of services for Autoclaves, Lights, Delivery units, Chairs, Compressors, Vacuum pumps, X-rays, handpieces, ultrasonic scalers of all brands.",
   },
   {
-    image: "/assets/img/products/2.png",
+    image: "/assets/img/products/equipment-repair.webp",
     title: (
       <p>
         Diagnostic for{" "}
@@ -85,7 +85,7 @@ export const products: Product[] = [
     ),
   },
   {
-    image: "/assets/img/products/6.png",
+    image: "/assets/img/products/medical-furniture.webp",
     title: (
       <p>
         Explore our wide range of{" "}
@@ -107,7 +107,7 @@ export const products: Product[] = [
     ),
   },
   {
-    image: "/assets/img/products/7.png",
+    image: "/assets/img/products/rental-equipment.webp",
     title: (
       <p>
         Explore a variety of{" "}
@@ -128,7 +128,7 @@ export const products: Product[] = [
     ),
   },
   {
-    image: "/assets/img/products/8.png",
+    image: "/assets/img/products/sterilization.webp",
     title: (
       <p>
         <Highlight color="secondary">Sterilization</Highlight>
