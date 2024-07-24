@@ -16,7 +16,7 @@ const Section = ({ id, title, children }: SectionProps) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
-  const y = useParallax(scrollYProgress, 250);
+  const y = useParallax(scrollYProgress, 225);
   return (
     <motion.section id={id} className={styles.container}>
       <motion.div

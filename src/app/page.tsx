@@ -18,13 +18,11 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           transform: "translateY(270px)",
-          gap: 80,
+          gap: 170,
         }}
       >
         <Partners />
-        <motion.div>
-          <Products />
-        </motion.div>
+        <Products />
         <Value />
         <AboutUs />
         <Health />

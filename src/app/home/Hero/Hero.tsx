@@ -1,7 +1,6 @@
 import Button from "@/app/components/Button";
 import styles from "./hero.module.css";
 import Image from "next/image";
-import heroImg from "../../../../public/assets/img/hero/hero-img.webp";
 import heroGear from "../../../../public/assets/svg/hero/hero-gear.svg";
 import heroBottom from "../../../../public/assets/svg/hero/hero-bottom.svg";
 import Highlight from "@/app/components/Highlight";
@@ -9,6 +8,7 @@ import Shine from "./components/Shine";
 import ExploreButton from "./components/ExploreButton";
 import consultingRoom from "../../../../public/assets/img/hero/consulting-room.webp";
 import { motion } from "framer-motion";
+import { scrollTo } from "@/app/utils/scroll";
 
 const Hero = () => {
   return (
@@ -44,10 +44,14 @@ const Hero = () => {
             </div>
             <div className={styles.cta}>
               <div className={styles.getStartedBtn}>
-                <Button>Get Started</Button>
+                <Button onClick={(e) => scrollTo(e, "products")}>
+                  Get Started
+                </Button>
               </div>
               <div className={styles.trustBtn}>
-                <Button type="outlined">Trust Us</Button>
+                <Button type="outlined" onClick={(e) => scrollTo(e, "about")}>
+                  Trust Us
+                </Button>
               </div>
             </div>
           </motion.div>
