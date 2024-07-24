@@ -2,6 +2,10 @@ import Image from "next/image";
 import { Product } from "../../Products";
 import styles from "./verticalCard.module.css";
 import Button from "@/app/components/Button";
+import { useRef } from "react";
+import { useScroll } from "framer-motion";
+import { useReverseParallax } from "@/app/utils/parallax";
+import { motion } from "framer-motion";
 
 type VerticalCardProps = {
   product: Product;
@@ -10,15 +14,26 @@ type VerticalCardProps = {
 const VerticalCard = ({ product }: VerticalCardProps) => {
   const { image, title, description } = product;
 
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+
+  const y = useReverseParallax(scrollYProgress, 15);
+
   return (
     <div className={styles.container}>
-      <div className={styles.image}>
+      <motion.div className={styles.image}>
         <Image src={image} alt="image" fill />
-      </div>
+      </motion.div>
       <div className={styles.info}>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.description}>{description}</div>
-        <Button type="secondary">{`I'm interested`}</Button>
+        <motion.div className={styles.title} ref={ref} style={{ y }}>
+          {title}
+        </motion.div>
+        <motion.div className={styles.description} style={{ y }}>
+          {description}
+        </motion.div>
+        <motion.div style={{ y }}>
+          <Button type="secondary">{`I'm interested`}</Button>
+        </motion.div>
       </div>
     </div>
   );
