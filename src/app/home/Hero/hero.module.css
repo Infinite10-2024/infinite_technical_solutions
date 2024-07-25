@@ -53,6 +53,7 @@
 .assets {
   flex: 1;
   width: 527px;
+  max-width: 527px;
 }
 
 .assetsRow1 {
