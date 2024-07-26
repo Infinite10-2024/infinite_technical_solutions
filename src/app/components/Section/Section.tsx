@@ -1,15 +1,12 @@
 import { ReactNode, useRef } from "react";
 import styles from "./section.module.css";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
+import { useParallax } from "@/app/utils/parallax";
 
 interface SectionProps {
   id: string;
   title: ReactNode | string;
   children: ReactNode;
-}
-
-function useParallax(value: MotionValue, distance: number) {
-  return useTransform(value, [0, 1], [-distance, distance]);
 }
 
 const Section = ({ id, title, children }: SectionProps) => {
