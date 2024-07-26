@@ -1,8 +1,6 @@
 import styles from "./shine.module.css";
 
-type Props = {};
-
-const Shine = (props: Props) => {
+const Shine = () => {
   return <div className={styles.container}></div>;
 };
 

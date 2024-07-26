@@ -6,4 +6,5 @@ export interface ButtonProps {
   type?: "primary" | "secondary" | "outlined" | "outlined-contrast" | "ghost";
   size?: "icon" | "full";
   onClick?: (e: MouseEvent) => void;
+  ariaLabel?: string;
 }

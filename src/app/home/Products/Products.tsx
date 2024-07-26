@@ -23,7 +23,7 @@ const Products = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
-  const y2 = useReverseParallax(scrollYProgress, 30);
+  const y = useReverseParallax(scrollYProgress, 30);
 
   return (
     <Section
@@ -35,7 +35,7 @@ const Products = () => {
       }
     >
       <div className={styles.content}>
-        <motion.div ref={ref} style={{ y: y2 }}>
+        <motion.div ref={ref} style={{ y }}>
           <HorizontalCard product={products[0]} />
         </motion.div>
         <motion.div
@@ -74,7 +74,7 @@ const Products = () => {
       <motion.div
         className={styles.mobileContent}
         ref={ref}
-        style={{ y: y2 }}
+        style={{ y }}
         initial={{ y: "5%", opacity: 0 }}
         whileInView={{ y: 14, opacity: 1 }}
         transition={{ delay: -0.2, duration: 0.75 }}

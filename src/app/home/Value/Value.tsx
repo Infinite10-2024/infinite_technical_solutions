@@ -14,7 +14,11 @@ import { motion } from "framer-motion";
 const Value = () => {
   const [activeImg, setActiveImg] = useState<number>(0);
 
-  const images = [img1, img2, img3];
+  const images = [
+    { text: "Health Care Products", image: img1 },
+    { text: "Medical Equipment", image: img2 },
+    { text: "Technical Service", image: img3 },
+  ];
 
   const stripInfo = [
     {
@@ -97,17 +101,16 @@ const Value = () => {
                 onClick={() => setActiveImg(index)}
               >
                 <Image
-                  src={img}
-                  alt={"img" + index}
+                  src={img.image}
+                  alt={img.text}
                   style={{ width: "100%" }}
                 />
                 <div
                   className={styles.background}
                   style={{
-                    background:
-                      activeImg === index
-                        ? "var(--color-secondary)"
-                        : "#C9CAC9",
+                    background: isActiveImg
+                      ? "var(--color-secondary)"
+                      : "#C9CAC9",
                   }}
                 ></div>
                 <p
@@ -115,7 +118,7 @@ const Value = () => {
                     opacity: activeImg === index ? 1 : 0,
                   }}
                 >
-                  High Quality
+                  {img.text}
                 </p>
               </div>
             );

@@ -2,18 +2,15 @@ import Highlight from "@/app/components/Highlight";
 import Section from "@/app/components/Section";
 import AboutCard from "./components/AboutCard";
 import styles from "./aboutUs.module.css";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
+import { useReverseParallax } from "@/app/utils/parallax";
 
 export type Benefit = {
   icon: string;
   title: string;
   description: string;
 };
-
-function useParallax2(value: MotionValue, distance: number) {
-  return useTransform(value, [1, 0], [-distance, distance]);
-}
 
 const AboutUs = () => {
   const benefits: Benefit[] = [
@@ -40,7 +37,7 @@ const AboutUs = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
-  const y2 = useParallax2(scrollYProgress, 40);
+  const y = useReverseParallax(scrollYProgress, 40);
 
   return (
     <Section
@@ -54,7 +51,7 @@ const AboutUs = () => {
       <div>
         <motion.p
           ref={ref}
-          style={{ y: y2 }}
+          style={{ y }}
           className={styles.description}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

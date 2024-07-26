@@ -13,7 +13,7 @@ const HorizontalCard = ({ product }: HorizontalCardProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <Image src={image} alt="image" width={446} height={360} />
+        <Image src={image} alt="image" width={446} height={366} />
       </div>
       <div className={styles.info}>
         <div className={styles.title}>{title}</div>

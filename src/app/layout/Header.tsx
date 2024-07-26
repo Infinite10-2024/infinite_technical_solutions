@@ -50,6 +50,7 @@ const Header = () => {
             icon={<Menu />}
             type="ghost"
             onClick={() => setShowMenu(true)}
+            ariaLabel="header-menu"
           />
         </div>
         <div

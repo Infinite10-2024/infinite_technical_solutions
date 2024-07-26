@@ -81,7 +81,7 @@ const Hero = () => {
             </div>
             <div className={styles.assetsRow2}>
               <div className={styles.whiteCube}>
-                <Image src={consultingRoom} alt="consulting-room"></Image>
+                <Image src={consultingRoom} alt="consulting-room" fill></Image>
               </div>
             </div>
           </motion.div>

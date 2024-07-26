@@ -12,7 +12,8 @@ const baiJamjuree = Bai_Jamjuree({
 
 export const metadata: Metadata = {
   title: "Infinite Technichal Solutions",
-  description: "",
+  description:
+    "We provide Dental and Medical Equipment Repair and Maintenance of all brands, and supporting business. Every day we do our best to be your partner.",
 };
 
 export default function RootLayout({
