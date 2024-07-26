@@ -3,6 +3,7 @@ import styles from "./exploreButton.module.css";
 import playBtn from "../../../../../../public/assets/svg/hero/hero-play-btn.svg";
 import { motion } from "framer-motion";
 import { scrollTo } from "@/app/utils/scroll";
+import Button from "@/app/components/Button";
 
 const ExploreButton = () => {
   return (
@@ -163,12 +164,11 @@ const ExploreButton = () => {
           fill="white"
         />
       </motion.svg>
-      <button
-        className={styles.playBtn}
-        onClick={(e) => scrollTo(e, "products")}
-      >
-        <Image src={playBtn} alt="playBtn" />
-      </button>
+      <div className={styles.playBtn}>
+        <Button type="ghost" onClick={(e) => scrollTo(e, "products")}>
+          <Image src={playBtn} alt="playBtn" />
+        </Button>
+      </div>
     </div>
   );
 };
