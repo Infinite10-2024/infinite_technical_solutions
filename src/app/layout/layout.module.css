@@ -1,5 +1,6 @@
 .container {
   padding: 100px 64px;
+  margin-top: 90px;
 }
 
 .headerContainer {
@@ -10,10 +11,11 @@
   border: 1px solid #d7d7d7;
   display: flex;
   justify-content: space-between;
-  padding: 16px 60px;
+  padding: 8px 60px;
   margin-bottom: -10px;
-  z-index: 1;
-  position: relative;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
 }
 
 .routeList {
@@ -22,6 +24,10 @@
   gap: 56px;
   list-style: none;
   font-size: 16px;
+}
+
+.logo {
+  cursor: pointer;
 }
 
 .route {
@@ -34,20 +40,29 @@
   cursor: pointer;
 }
 
-.active::after {
+.route::after {
   background-color: var(--color-secondary);
   border-radius: 10px;
-  bottom: -8px;
+  bottom: -4px;
   content: "";
   display: block;
   height: 4px;
   left: -10%;
-  position: absolute;
+  position: relative;
+  width: 0%;
+  transition: 0.1s all ease-in;
+}
+
+.active.route::after {
   width: 120%;
 }
 
 .mobileMenu {
   display: none;
+}
+
+.call button {
+  font-size: 16px;
 }
 
 .footerContainer {
@@ -95,6 +110,13 @@
   transition: all linear 0.3s;
 }
 
+.mobileMenuInnerContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .mobileRouteList {
   list-style: none;
   padding: 24px;
@@ -121,20 +143,40 @@
   right: 0;
 }
 
+.mobileCall button {
+  font-weight: 500 !important;
+  color: var(--color-font);
+  margin: auto;
+}
+
+.mobileCall {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1120px) {
+  .headerContainer nav {
+    display: none;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .mobileMenu {
+    display: block;
+    order: 4;
+  }
+
+  .call {
+    order: 3;
+  }
+}
+
 @media (max-width: 900px) {
   .headerContainer {
     flex-direction: row-reverse;
     padding-right: 32px;
     padding-left: 24px;
-  }
-
-  .headerContainer nav,
-  .cart {
-    display: none;
-  }
-
-  .mobileMenu {
-    display: block;
   }
 
   .footerRow li {
@@ -145,6 +187,10 @@
 @media screen and (max-width: 700px) {
   .container {
     padding-inline: 32px;
+  }
+
+  .call {
+    display: none;
   }
 }
 

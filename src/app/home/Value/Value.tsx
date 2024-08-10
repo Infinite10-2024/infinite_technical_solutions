@@ -73,9 +73,9 @@ const Value = () => {
             done on-site using high quality parts.
           </p>
           <div className={styles.row}>
-            <p>Health care products</p>
-            <p>Medical Equipment</p>
-            <p>Technical service</p>
+            <p onClick={() => setActiveImg(0)}>Health care products</p>
+            <p onClick={() => setActiveImg(1)}>Medical Equipment</p>
+            <p onClick={() => setActiveImg(2)}>Technical service</p>
           </div>
         </motion.div>
         <motion.div
@@ -183,7 +183,9 @@ const Value = () => {
                 className={styles.stripText}
               >
                 <div className={styles.stripHeading}>{info.title}</div>
-                <p className={styles.stripDescription}>{info.description}</p>
+                <div className={styles.stripDescription}>
+                  {info.description}
+                </div>
               </motion.div>
             ))}
           </div>

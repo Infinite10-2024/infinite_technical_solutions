@@ -3,6 +3,8 @@ import { routes } from "../routes";
 import styles from "./layout.module.css";
 import Close from "../../../public/assets/icons/Close";
 import Button from "../components/Button";
+import Call from "../../../public/assets/icons/Call";
+import Link from "next/link";
 
 interface MobileMenuProps {
   handleNavClick: (event: MouseEvent, targetId: string) => void;
@@ -16,7 +18,7 @@ const MobileMenu = ({ handleNavClick, setShowMenu }: MobileMenuProps) => {
   };
 
   return (
-    <div>
+    <div className={styles.mobileMenuInnerContainer}>
       <div className={styles.mobileMenuCloseIcon}>
         <Button
           icon={<Close />}
@@ -34,6 +36,13 @@ const MobileMenu = ({ handleNavClick, setShowMenu }: MobileMenuProps) => {
           </li>
         ))}
       </ul>
+      <div className={styles.mobileCall}>
+        <Button icon={<Call />} type="ghost">
+          <Link target="_blank" href="tel:+3012890029">
+            224 800 5302
+          </Link>
+        </Button>
+      </div>
     </div>
   );
 };

@@ -32,12 +32,12 @@
   max-width: 660px;
 }
 
-.title {
+.slogan {
   font-size: clamp(32px, 5.5vw, 64px);
   font-weight: 500;
 }
 
-.slogan {
+.title {
   font-size: clamp(24px, 4vw, 32px);
 }
 
@@ -234,7 +234,7 @@
     max-width: none;
   }
 
-  .title {
+  .slogan {
     font-size: clamp(32px, 10vw, 64px);
     font-weight: 500;
   }

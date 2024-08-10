@@ -3,40 +3,79 @@
 import { routes } from "@/app/routes";
 import Image from "next/image";
 import styles from "./layout.module.css";
-import { MouseEvent, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 import { scrollTo } from "../utils/scroll";
 import Button from "../components/Button";
 import Menu from "../../../public/assets/icons/Menu";
 import MobileMenu from "./MobileMenu";
+import Call from "../../../public/assets/icons/Call";
+import Link from "next/link";
+
+function debounce(func: any, delay: any) {
+  let timer: any;
+  return function (...args: any) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(args as any);
+    }, delay);
+  };
+}
 
 const Header = () => {
   const [activePath, setActivePath] = useState<string>("home");
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   const isCurrentPath = (path: string) => {
-    return activePath === path ? styles.active : styles.route;
+    return activePath === path ? styles.active : "";
   };
 
   const handleNavClick = (event: MouseEvent, targetId: string) => {
     scrollTo(event, targetId);
-    setActivePath(targetId);
   };
+
+  useEffect(() => {
+    const sectionNames = ["home", "products", "about", "contact"];
+    const sections = sectionNames.map((s) => document.getElementById(s));
+    const heroSection = document.getElementById("home");
+
+    const handleScroll = debounce(() => {
+      sections.forEach((s, i) => {
+        const offset = (s?.offsetTop as number) - 75;
+        const height = s?.offsetHeight;
+        const heroHeight = heroSection?.offsetHeight;
+
+        if (!heroSection || !heroHeight || !height || !s) return;
+
+        if (
+          window.scrollY >= offset + (s.id === "home" ? 0 : heroHeight) &&
+          window.scrollY <= offset + height + (s.id === "home" ? 0 : heroHeight)
+        ) {
+          setActivePath(s.id);
+        }
+      });
+    }, 0);
+
+    window.addEventListener("scroll", handleScroll);
+  }, [activePath]);
 
   return (
     <div className={styles.headerContainer}>
       <Image
         src="assets/svg/main-logo.svg"
         alt="main-logo"
-        width={203}
-        height={62}
+        width={257}
+        height={78}
         onClick={(e) => handleNavClick(e, "home")}
+        className={styles.logo}
       />
       <nav>
         <ul className={styles.routeList}>
           {routes.map((route) => (
             <li
               key={route.path}
-              className={isCurrentPath(route.path)}
+              className={`${styles.route} ${isCurrentPath(
+                route.path
+              )} route-path`}
               onClick={(e) => handleNavClick(e, route.path)}
             >
               {route.label}
@@ -67,10 +106,12 @@ const Header = () => {
         </div>
       </div>
 
-      <div className={styles.cart}>
-        {/* <Button icon={<Cart />} type="outlined-contrast">
-          Carrito
-        </Button> */}
+      <div className={styles.call}>
+        <Button icon={<Call />} type="outlined-contrast">
+          <Link target="_blank" href="tel:+3012890029">
+            224 800 5302
+          </Link>
+        </Button>
       </div>
     </div>
   );

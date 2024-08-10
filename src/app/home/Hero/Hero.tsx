@@ -25,13 +25,13 @@ const Hero = () => {
             className={styles.info}
           >
             <div>
-              <h1 className={styles.title}>
+              <h2 className={styles.title}>
                 We’re <Highlight>more</Highlight> than a supplier or technical
                 service
-              </h1>
-              <h2 className={styles.slogan}>
-                The solution for all your office needs
               </h2>
+              <h1 className={styles.slogan}>
+                The solution for all your office needs
+              </h1>
             </div>
             <div>
               <p className={styles.text}>

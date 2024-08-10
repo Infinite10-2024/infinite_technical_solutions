@@ -39,6 +39,7 @@
   border-radius: 30px;
   padding: 12px 20px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .images {

@@ -11,6 +11,8 @@ import rpi from "../../../../public/assets/svg/partners/rpi-logo.svg";
 import tpc from "../../../../public/assets/svg/partners/tpc-logo.svg";
 import vector from "../../../../public/assets/svg/partners/vector-logo.svg";
 import bienAir from "../../../../public/assets/svg/partners/bien-air-logo.svg";
+import bds from "../../../../public/assets/svg/partners/bds-logo.jpeg";
+import jds from "../../../../public/assets/svg/partners/jds-logo.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -27,10 +29,12 @@ const Partners = () => {
     tpc,
     vector,
     bienAir,
+    bds,
+    jds,
   ];
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="partners">
       <p>
         We&rsquo;re <Highlight color="secondary">dealers</Highlight> of:
       </p>
