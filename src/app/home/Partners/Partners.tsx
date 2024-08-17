@@ -13,7 +13,11 @@ import vector from "../../../../public/assets/svg/partners/vector-logo.svg";
 import bienAir from "../../../../public/assets/svg/partners/bien-air-logo.svg";
 import bds from "../../../../public/assets/svg/partners/bds-logo.jpeg";
 import jds from "../../../../public/assets/svg/partners/jds-logo.png";
+import drna from "../../../../public/assets/svg/partners/drna-logo.svg";
+import flight from "../../../../public/assets/svg/partners/flight-logo.svg";
+import enbio from "../../../../public/assets/svg/partners/enbio-logo.png";
 import Image from "next/image";
+import itsLogo from "../../../../public/assets/img/partners/its-logo.png";
 import { motion } from "framer-motion";
 
 const Partners = () => {
@@ -31,12 +35,19 @@ const Partners = () => {
     bienAir,
     bds,
     jds,
+    drna,
+    flight,
+    enbio,
   ];
 
   return (
     <div className={styles.container} id="partners">
       <p>
-        We&rsquo;re <Highlight color="secondary">dealers</Highlight> of:
+        Discover some of ITS{" "}
+        <span>
+          <Image src={itsLogo} alt="its-logo" width={50} height={50} />
+        </span>{" "}
+        manufacturing partners:
       </p>
       <div className={styles.sliderContainer}>
         <motion.div

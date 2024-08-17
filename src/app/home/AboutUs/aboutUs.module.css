@@ -2,8 +2,13 @@
   font-size: clamp(16px, 4vw, 24px);
   color: var(--color-font-secondary);
   text-align: center;
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+  flex-direction: column;
+  gap: 20px;
   margin-top: -40px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .description b {
@@ -12,7 +17,6 @@
 
 .grid {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-between;
 
   margin-top: 25px;

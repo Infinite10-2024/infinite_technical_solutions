@@ -3,6 +3,7 @@ import Section from "@/app/components/Section";
 import styles from "./health.module.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { motion } from "framer-motion";
+import { detectScroll } from "@/app/utils/scroll";
 
 const Health = () => {
   return (
@@ -10,7 +11,7 @@ const Health = () => {
       id="health"
       title={
         <h2>
-          Our <Highlight color="secondary">value offer</Highlight>
+          Our <Highlight color="secondary">culture</Highlight>
         </h2>
       }
     >
@@ -25,17 +26,38 @@ const Health = () => {
             We work in the health care industry,{" "}
             <Highlight color="secondary">just like you</Highlight>.
           </h3>
-          <p className={styles.description}>
-            We’re focused on providing <b>win-to-win solutions</b> for our
-            clients, partners, and employees. That is why, our top priority is
-            investing in training for our Service Technicians, to ensure they
-            have the necessary knowledge on everything from clinical to business
-            practices.
-          </p>
+          <div className={styles.description}>
+            <p>
+              We’re focused on providing <b>win-to-win solutions</b> for our
+              clients, partners, and employees. That is why we make it a
+              priority to invest in training our Service Technicians, to ensure
+              they have the necessary knowledge, from clinical to business
+              practices, to provide the best possible solution for all of our
+              customers.
+            </p>
+            <p>{`Every day at Infinite Technical Solutions, we're striving to improve
+            efficiencies, advance technologies, and reduce overhead costs, which
+            translates into an exceptional customer experience.`}</p>
+          </div>
           <div className={styles.feats}>
-            <p className={styles.feat}>Health care products</p>
-            <p className={styles.feat}>Medical Equipment</p>
-            <p className={styles.feat}>Technical service</p>
+            <p
+              className={styles.feat}
+              onClick={(e) => detectScroll(e, "products")}
+            >
+              Health care products
+            </p>
+            <p
+              className={styles.feat}
+              onClick={(e) => detectScroll(e, "products")}
+            >
+              Medical Equipment
+            </p>
+            <p
+              className={styles.feat}
+              onClick={(e) => detectScroll(e, "products")}
+            >
+              Technical service
+            </p>
           </div>
         </motion.div>
         <motion.div

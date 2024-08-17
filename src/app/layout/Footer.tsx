@@ -2,6 +2,7 @@ import styles from "./layout.module.css";
 import logo from "../../../public/assets/svg/contrast-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import CodingBoxLogo from "../../../public/assets/icons/CodingBoxLogo";
 
 const Footer = () => {
   return (
@@ -20,6 +21,12 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
+      </div>
+      <div className={styles.coding}>
+        <p>Desarrollado por:</p>
+        <Link href="http://www.codingbox.app" target="_blank">
+          <CodingBoxLogo height={40} />
+        </Link>
       </div>
     </div>
   );

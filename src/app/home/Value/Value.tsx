@@ -37,7 +37,7 @@ const Value = () => {
         </p>
       ),
       description:
-        "Our Service Technicians are the best because we know the importance",
+        "All of our technicians are certified and receive extensive training in-house and from our manufacturing partners.",
     },
     {
       title: "Full-Service dealership",

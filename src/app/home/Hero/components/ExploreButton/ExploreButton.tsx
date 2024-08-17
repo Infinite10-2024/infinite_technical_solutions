@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./exploreButton.module.css";
 import playBtn from "../../../../../../public/assets/svg/hero/hero-play-btn.svg";
 import { motion } from "framer-motion";
-import { scrollTo } from "@/app/utils/scroll";
+import { detectScroll } from "@/app/utils/scroll";
 import Button from "@/app/components/Button";
 
 const ExploreButton = () => {
@@ -165,7 +165,7 @@ const ExploreButton = () => {
         />
       </motion.svg>
       <div className={styles.playBtn}>
-        <Button type="ghost" onClick={(e) => scrollTo(e, "products")}>
+        <Button type="ghost" onClick={(e) => detectScroll(e, "products")}>
           <Image src={playBtn} alt="playBtn" />
         </Button>
       </div>

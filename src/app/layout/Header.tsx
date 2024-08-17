@@ -4,7 +4,7 @@ import { routes } from "@/app/routes";
 import Image from "next/image";
 import styles from "./layout.module.css";
 import { MouseEvent, useEffect, useState } from "react";
-import { scrollTo } from "../utils/scroll";
+import { detectScroll } from "../utils/scroll";
 import Button from "../components/Button";
 import Menu from "../../../public/assets/icons/Menu";
 import MobileMenu from "./MobileMenu";
@@ -30,7 +30,7 @@ const Header = () => {
   };
 
   const handleNavClick = (event: MouseEvent, targetId: string) => {
-    scrollTo(event, targetId);
+    detectScroll(event, targetId);
   };
 
   useEffect(() => {

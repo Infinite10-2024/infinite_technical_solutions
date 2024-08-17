@@ -154,6 +154,16 @@
   margin-bottom: 24px;
 }
 
+.coding {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 8px;
+  color: var(--color-font-contrast);
+  font-size: 12px;
+}
+
 @media (max-width: 1120px) {
   .headerContainer nav {
     display: none;
@@ -182,6 +192,10 @@
 
   .footerRow li {
     font-size: 20px;
+  }
+
+  .coding {
+    margin-top: 24px;
   }
 }
 

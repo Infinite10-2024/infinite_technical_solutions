@@ -49,7 +49,7 @@ const AboutUs = () => {
       }
     >
       <div>
-        <motion.p
+        <motion.div
           ref={ref}
           style={{ y }}
           className={styles.description}
@@ -57,11 +57,17 @@ const AboutUs = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.75, delay: 0.2 }}
         >
-          We have the best reliable and well-trained Service Technicians because
-          we know{" "}
-          <b>how important it is to keep your equipment running smoothly</b> to
-          help you avoid costly downtime
-        </motion.p>
+          <p>
+            We have the best reliable and well-trained Service Technicians
+            because we know{" "}
+            <b>how important it is to keep your equipment running smoothly</b>{" "}
+            to help you avoid costly downtime.
+          </p>
+          <p>
+            <b>We’re more than a supplier or technical service.</b>{" "}
+            {`We're a full-service dealership, our service technicians come to your office fully stocked with parts and supplies from most manufacturers.`}
+          </p>
+        </motion.div>
         <div className={styles.grid}>
           {benefits.map((b, i) => (
             <motion.div

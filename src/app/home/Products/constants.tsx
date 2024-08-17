@@ -24,10 +24,12 @@ export const products: Product[] = [
     ),
     description: (
       <p>
-        We offer CIT and Traditional Technical Support for Dental, Medical and
-        Veterinarian Offices.{" "}
-        <b>We offer a Mechanical Room Maintenance Program.</b> We maintain and
-        fix high-speed, electric, and low-speed handpieces.
+        <b>
+          We offer CIT and Traditional Technical Support for Dental, Medical and
+          Veterinarian Offices.
+        </b>{" "}
+        We offer a Mechanical Room Maintenance Program. We maintain and fix
+        high-speed, electric, and low-speed handpieces.
       </p>
     ),
   },
@@ -44,10 +46,9 @@ export const products: Product[] = [
         Learn more about our comprehensive approach to handling all inspections,
         assessments, and diagnostics to keep your office up to date.{" "}
         <b>
-          Dive deeper into the details of our Mechanical Room Maintenance
-          Program{" "}
+          No matter what brand or type, we do our best to keep your equipment in
+          optimal condition.
         </b>
-        for a more in-depth understanding.
       </p>
     ),
   },
@@ -62,9 +63,10 @@ export const products: Product[] = [
     ),
     description: (
       <p>
-        Our products offer precise results and are crafted from top-notch
-        materials. <b>Explore our variety of dental lab supplies</b>, such as
-        acrylics, waxes, and impression materials.
+        We offer a range of dental X-ray equipment, including intraoral and
+        extraoral X-ray machines. One you entrust to ITS.{" "}
+        <b>We value your time and equipment</b> and provide the best service and
+        the earliest possible response.
       </p>
     ),
   },
@@ -120,8 +122,7 @@ export const products: Product[] = [
         Our Short- or Long-term Autoclaves and Compressors Lease options are
         designed to meet the diverse needs of our clients.{" "}
         <b>
-          Whether you require equipment for a short project or a long-term
-          operation
+          Whether you require equipment for a short or a long-term operation
         </b>
         , we have flexible solutions to keep your office running smoothly.
       </p>
@@ -137,11 +138,15 @@ export const products: Product[] = [
     description: (
       <p>
         Our team at Infinite Technical Solutions LLC prioritizes safety within
-        dental practices. We specialize in high-quality technical support for
-        sterilization centers and instrument washers, offering top-notch
-        supplies, resources, <b>Wand product solutions for your office</b>.
-        Whether you need a short- or long-term autoclave lease during repairs or
-        while awaiting a new purchase, we&rsquo;sve got you covered.
+        dental practices.{" "}
+        <b>
+          We specialize in high-quality technical support for sterilization
+          centers and instrument washers
+        </b>
+        , offering top-notch supplies, resources, Wand product solutions for
+        your office. Whether you need a short- or long-term autoclave lease
+        during repairs or while awaiting a new purchase, we&rsquo;sve got you
+        covered.
       </p>
     ),
   },
@@ -174,10 +179,12 @@ export const products: Product[] = [
       <p>
         Prioritize ergonomic design and access angles when choosing core
         equipment. Optimize workflow efficiency and focus on comfortable,
-        healthy solutions. Factors to consider: patient chair profile
-        integration, upgradeable platform for evolving equipment technologies,
-        doctor and hygiene stools for superior body support, smooth
-        repositioning, and optional touchpad for user-friendly lighting.
+        healthy solutions. Factors to consider: patient chair profile including
+        height, width and swivel range; integration in delivery system with
+        upgradeable platform as new equipment technologies advance; comfort and
+        mobility of doctor and hygiene stools to provide superior body support
+        and smooth repositioning; optional touchpad for ease-of-use lighting
+        with proper light position to reduce fatigue, among other things.
       </p>
     ),
   },

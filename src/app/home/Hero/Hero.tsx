@@ -8,7 +8,7 @@ import Shine from "./components/Shine";
 import ExploreButton from "./components/ExploreButton";
 import consultingRoom from "../../../../public/assets/img/hero/consulting-room.webp";
 import { motion } from "framer-motion";
-import { scrollTo } from "@/app/utils/scroll";
+import { detectScroll } from "@/app/utils/scroll";
 
 const Hero = () => {
   return (
@@ -25,18 +25,15 @@ const Hero = () => {
             className={styles.info}
           >
             <div>
-              <h2 className={styles.title}>
-                We’re <Highlight>more</Highlight> than a supplier or technical
-                service
-              </h2>
               <h1 className={styles.slogan}>
                 The solution for all your office needs
               </h1>
             </div>
             <div>
               <p className={styles.text}>
-                We provide Dental and Medical Equipment Repair and Maintenance
-                of all brands, and supporting business.{" "}
+                We provide the most affordable and reliable Dental and Medical
+                Equipment Repair and Maintenance of all brands and health care
+                products. <br />
                 <Highlight>
                   Every day we do our best to be your partner.
                 </Highlight>
@@ -44,12 +41,15 @@ const Hero = () => {
             </div>
             <div className={styles.cta}>
               <div className={styles.getStartedBtn}>
-                <Button onClick={(e) => scrollTo(e, "products")}>
+                <Button onClick={(e) => detectScroll(e, "products")}>
                   Get Started
                 </Button>
               </div>
               <div className={styles.trustBtn}>
-                <Button type="outlined" onClick={(e) => scrollTo(e, "about")}>
+                <Button
+                  type="outlined"
+                  onClick={(e) => detectScroll(e, "about")}
+                >
                   Trust Us
                 </Button>
               </div>
@@ -64,17 +64,19 @@ const Hero = () => {
             <div className={styles.assetsRow1}>
               <div className={styles.redCube}>
                 <div className={styles.redCubeContent}>
-                  <p className={styles.assetHeading}>200K</p>
-                  <p className={styles.assetText}>
+                  <p>Your</p>
+                  <p>Trusted</p>
+                  <p>Partner</p>
+                  {/* <p className={styles.assetText}>
                     Infinite Technical Solutions, <br /> guarantee
-                  </p>
+                  </p> */}
                 </div>
               </div>
               <div className={styles.blueCube}>
                 <div className={styles.blueCubeContent}>
                   <p className={styles.assetHeading}>1 year</p>
                   <p className={styles.assetText}>
-                    Infinite Technical Solutions, <br /> guarantee
+                    Serving All Brand, <br /> <b>with excellence</b>
                   </p>
                 </div>
               </div>

@@ -47,14 +47,14 @@ const Contact = () => {
           <b>You always will be receiving a personalized service. </b>
         </p>
         <div className={styles.btnsRow}>
-          <Button type="primary">Fill form</Button>
+          {/* <Button type="primary">Fill form</Button> */}
           <Button type="secondary">
             <Link target="_blank" href="tel:+3012890029">
               Make a call
             </Link>
           </Button>
           <Button type="outlined-contrast">
-            <Link target="_blank" href="mailto:luismoreno785@gmail.com">
+            <Link target="_blank" href="mailto:customerservice@infinitetechnicalsolutions.com">
               Send an e-mail
             </Link>
           </Button>

@@ -132,8 +132,12 @@
   margin-left: 232px;
 }
 
+.stripText:first-child {
+  margin-right: -20px;
+}
+
 .stripText {
-  max-width: 236px;
+  max-width: 240px;
 }
 
 .stripHeading {

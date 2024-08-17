@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { useScroll } from "framer-motion";
 import { useReverseParallax } from "@/app/utils/parallax";
 import { motion } from "framer-motion";
+import { detectScroll } from "@/app/utils/scroll";
 
 type VerticalCardProps = {
   product: Product;
@@ -29,7 +30,10 @@ const VerticalCard = ({ product }: VerticalCardProps) => {
           {title}
         </motion.div>
         <motion.div className={styles.description}>{description}</motion.div>
-        <Button type="secondary">{`I'm interested`}</Button>
+        <Button
+          type="secondary"
+          onClick={(e) => detectScroll(e, "contact")}
+        >{`I'm interested`}</Button>
       </div>
     </div>
   );
