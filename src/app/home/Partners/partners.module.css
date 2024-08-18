@@ -40,19 +40,21 @@
   justify-content: center;
   align-items: center;
   gap: 100px;
-  width: 400%;
 }
 
 .slider {
   animation: slide 35s linear infinite alternate;
+  width: 400%;
 }
 
 .slider1 {
-  animation: slide 20s linear infinite alternate;
+  animation: slide 40s linear infinite alternate;
+  width: 800vw;
 }
 
 .slider2 {
-  animation: slideReverse 20s linear infinite alternate;
+  animation: slideReverse 40s linear infinite alternate;
+  width: 800vw;
 }
 
 @keyframes slide {

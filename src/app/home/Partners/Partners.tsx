@@ -62,8 +62,14 @@ const Partners = () => {
           {logos.map((logo) => (
             <Image key={logo} src={logo} alt="partner-logo" />
           ))}
+          {logos.map((logo) => (
+            <Image key={logo} src={logo} alt="partner-logo" />
+          ))}
         </div>
         <div className={styles.slider2}>
+          {logos.map((logo) => (
+            <Image key={logo} src={logo} alt="partner-logo" />
+          ))}
           {logos.map((logo) => (
             <Image key={logo} src={logo} alt="partner-logo" />
           ))}
