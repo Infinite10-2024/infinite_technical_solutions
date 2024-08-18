@@ -8,23 +8,8 @@ import Shine from "./components/Shine";
 import ExploreButton from "./components/ExploreButton";
 import consultingRoom from "../../../../public/assets/img/hero/consulting-room.webp";
 import { detectScroll } from "@/app/utils/scroll";
-import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <div id="home">
       <div className={styles.container}>
@@ -93,12 +78,12 @@ const Hero = () => {
           <Shine />
         </div>
         <div className={styles.gear}>
-          <Image priority={windowWidth > 700} src={heroGear} alt="gear" />
+          <Image priority={false} src={heroGear} alt="gear" />
         </div>
       </div>
       <div className={styles.bottom}>
         <ExploreButton />
-        <Image priority={true} src={heroBottom} alt="bottom" />
+        <Image src={heroBottom} alt="bottom" />
       </div>
     </div>
   );
