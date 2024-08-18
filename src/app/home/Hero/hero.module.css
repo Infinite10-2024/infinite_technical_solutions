@@ -361,5 +361,6 @@
   .info,
   .assets {
     animation: none;
+    opacity: 1;
   }
 }
