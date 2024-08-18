@@ -1,4 +1,3 @@
-import Highlight from "@/app/components/Highlight";
 import styles from "./partners.module.css";
 import owandy from "../../../../public/assets/svg/partners/owandy-logo.svg";
 import ads from "../../../../public/assets/svg/partners/ads-logo.svg";
@@ -61,11 +60,11 @@ const Partners = () => {
           }}
           className={styles.slider}
         >
-          {logos.map((logo, index) => (
-            <Image key={index} src={logo} alt="partner-logo" />
+          {logos.map((logo) => (
+            <Image key={logo} src={logo} alt="partner-logo" />
           ))}
-          {logos.map((logo, index) => (
-            <Image key={index} src={logo} alt="partner-logo" />
+          {logos.map((logo) => (
+            <Image key={logo} src={logo} alt="partner-logo" />
           ))}
         </motion.div>
       </div>
@@ -81,8 +80,8 @@ const Partners = () => {
           }}
           className={styles.slider1}
         >
-          {logos.map((logo, index) => (
-            <Image key={index} src={logo} alt="partner-logo" />
+          {logos.map((logo) => (
+            <Image key={logo} src={logo} alt="partner-logo" />
           ))}
         </motion.div>
         <motion.div
@@ -96,8 +95,8 @@ const Partners = () => {
           }}
           className={styles.slider2}
         >
-          {logos.map((logo, index) => (
-            <Image key={index} src={logo} alt="partner-logo" />
+          {logos.map((logo) => (
+            <Image key={logo} src={logo} alt="partner-logo" />
           ))}
         </motion.div>
       </div>

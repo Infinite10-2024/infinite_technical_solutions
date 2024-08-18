@@ -28,11 +28,10 @@ const MobileMenu = ({ handleNavClick, setShowMenu }: MobileMenuProps) => {
       </div>
       <ul className={styles.mobileRouteList}>
         {routes.map((route) => (
-          <li
-            key={route.path}
-            onClick={(e) => handleMobileClick(e, route.path)}
-          >
-            {route.label}
+          <li key={route.path}>
+            <button onClick={(e) => handleMobileClick(e, route.path)}>
+              {route.label}
+            </button>
           </li>
         ))}
       </ul>

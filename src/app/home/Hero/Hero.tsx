@@ -18,12 +18,7 @@ const Hero = () => {
           <Shine />
         </div>
         <div className={styles.content}>
-          <motion.div
-            initial={{ x: "-10%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.75 }}
-            className={styles.info}
-          >
+          <motion.div className={styles.info}>
             <div>
               <h1 className={styles.slogan}>
                 The solution for all your office needs
@@ -55,12 +50,7 @@ const Hero = () => {
               </div>
             </div>
           </motion.div>
-          <motion.div
-            initial={{ x: "10%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.75, delay: 0.3 }}
-            className={styles.assets}
-          >
+          <motion.div className={styles.assets}>
             <div className={styles.assetsRow1}>
               <div className={styles.redCube}>
                 <div className={styles.redCubeContent}>

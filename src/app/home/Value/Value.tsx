@@ -10,6 +10,7 @@ import img3 from "../../../../public/assets/img/value/3.webp";
 import stripImg from "../../../../public/assets/img/value/lamp.png";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Button from "@/app/components/Button";
 
 const Value = () => {
   const [activeImg, setActiveImg] = useState<number>(0);
@@ -73,9 +74,15 @@ const Value = () => {
             done on-site using high quality parts.
           </p>
           <div className={styles.row}>
-            <p onClick={() => setActiveImg(0)}>Health care products</p>
-            <p onClick={() => setActiveImg(1)}>Medical Equipment</p>
-            <p onClick={() => setActiveImg(2)}>Technical service</p>
+            <Button type="outlined-contrast" onClick={() => setActiveImg(0)}>
+              Health care products
+            </Button>
+            <Button type="outlined-contrast" onClick={() => setActiveImg(1)}>
+              Medical Equipment
+            </Button>
+            <Button type="outlined-contrast" onClick={() => setActiveImg(2)}>
+              Technical service
+            </Button>
           </div>
         </motion.div>
         <motion.div
@@ -94,8 +101,8 @@ const Value = () => {
             const isActiveImg = activeImg === index;
 
             return (
-              <div
-                key={index}
+              <button
+                key={img.text}
                 style={{ width: isActiveImg ? "50%" : "25%" }}
                 className={styles.imageContainer}
                 onClick={() => setActiveImg(index)}
@@ -120,7 +127,7 @@ const Value = () => {
                 >
                   {img.text}
                 </p>
-              </div>
+              </button>
             );
           })}
         </motion.div>
@@ -179,7 +186,7 @@ const Value = () => {
                 initial={{ y: "25%", opacity: 0.5 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.75, delay: (index * 2) / 10 }}
-                key={index}
+                key={String(info.title)}
                 className={styles.stripText}
               >
                 <div className={styles.stripHeading}>{info.title}</div>

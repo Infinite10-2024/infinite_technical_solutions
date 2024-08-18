@@ -3,9 +3,8 @@ import { Product } from "../../Products";
 import styles from "./verticalCard.module.css";
 import Button from "@/app/components/Button";
 import { useRef } from "react";
-import { useScroll } from "framer-motion";
+import { useScroll, motion } from "framer-motion";
 import { useReverseParallax } from "@/app/utils/parallax";
-import { motion } from "framer-motion";
 import { detectScroll } from "@/app/utils/scroll";
 
 type VerticalCardProps = {

@@ -123,8 +123,7 @@ export const products: Product[] = [
         designed to meet the diverse needs of our clients.{" "}
         <b>
           Whether you require equipment for a short or a long-term operation
-        </b>
-        , we have flexible solutions to keep your office running smoothly.
+        </b>, we have flexible solutions to keep your office running smoothly.
       </p>
     ),
   },
@@ -142,8 +141,7 @@ export const products: Product[] = [
         <b>
           We specialize in high-quality technical support for sterilization
           centers and instrument washers
-        </b>
-        , offering top-notch supplies, resources, Wand product solutions for
+        </b>, offering top-notch supplies, resources, Wand product solutions for
         your office. Whether you need a short- or long-term autoclave lease
         during repairs or while awaiting a new purchase, we&rsquo;sve got you
         covered.

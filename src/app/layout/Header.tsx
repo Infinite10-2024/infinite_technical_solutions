@@ -11,16 +11,6 @@ import MobileMenu from "./MobileMenu";
 import Call from "../../../public/assets/icons/Call";
 import Link from "next/link";
 
-function debounce(func: any, delay: any) {
-  let timer: any;
-  return function (...args: any) {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      func.apply(args as any);
-    }, delay);
-  };
-}
-
 const Header = () => {
   const [activePath, setActivePath] = useState<string>("home");
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -40,7 +30,7 @@ const Header = () => {
     const sections = sectionNames.map((s) => document.getElementById(s));
     const heroSection = document.getElementById("home");
 
-    const handleScroll = debounce(() => {
+    const handleScroll = () => {
       sections.forEach((s, i) => {
         const offset = (s?.offsetTop as number) - 75;
         const height = s?.offsetHeight;
@@ -55,7 +45,7 @@ const Header = () => {
           setActivePath(s.id);
         }
       });
-    }, 0);
+    };
 
     window.addEventListener("scroll", handleScroll);
   }, [activePath]);
@@ -78,9 +68,13 @@ const Header = () => {
               className={`${styles.route} ${isCurrentPath(
                 route.path
               )} route-path`}
-              onClick={(e) => handleNavClick(e, route.path)}
             >
-              {route.label}
+              <Button
+                onClick={(e) => handleNavClick(e, route.path)}
+                type="ghost"
+              >
+                {route.label}
+              </Button>
             </li>
           ))}
         </ul>

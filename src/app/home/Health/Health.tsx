@@ -4,6 +4,7 @@ import styles from "./health.module.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { motion } from "framer-motion";
 import { detectScroll } from "@/app/utils/scroll";
+import Button from "@/app/components/Button";
 
 const Health = () => {
   return (
@@ -40,24 +41,24 @@ const Health = () => {
             translates into an exceptional customer experience.`}</p>
           </div>
           <div className={styles.feats}>
-            <p
-              className={styles.feat}
+            <Button
+              type="outlined-contrast"
               onClick={(e) => detectScroll(e, "products")}
             >
               Health care products
-            </p>
-            <p
-              className={styles.feat}
+            </Button>
+            <Button
+              type="outlined-contrast"
               onClick={(e) => detectScroll(e, "products")}
             >
               Medical Equipment
-            </p>
-            <p
-              className={styles.feat}
+            </Button>
+            <Button
+              type="outlined-contrast"
               onClick={(e) => detectScroll(e, "products")}
             >
               Technical service
-            </p>
+            </Button>
           </div>
         </motion.div>
         <motion.div
