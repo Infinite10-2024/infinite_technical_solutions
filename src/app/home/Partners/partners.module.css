@@ -43,6 +43,36 @@
   width: 400%;
 }
 
+.slider {
+  animation: slide 35s linear infinite alternate;
+}
+
+.slider1 {
+  animation: slide 20s linear infinite alternate;
+}
+
+.slider2 {
+  animation: slideReverse 20s linear infinite alternate;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideReverse {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .slider img {
   height: 80px;
   cursor: pointer;

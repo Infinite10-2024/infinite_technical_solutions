@@ -17,7 +17,6 @@ import flight from "../../../../public/assets/svg/partners/flight-logo.svg";
 import enbio from "../../../../public/assets/svg/partners/enbio-logo.png";
 import Image from "next/image";
 import itsLogo from "../../../../public/assets/img/partners/its-logo.png";
-import { motion } from "framer-motion";
 
 const Partners = () => {
   const logos = [
@@ -49,56 +48,26 @@ const Partners = () => {
         manufacturing partners:
       </p>
       <div className={styles.sliderContainer}>
-        <motion.div
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
-          transition={{
-            duration: 35,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className={styles.slider}
-        >
+        <div className={styles.slider}>
           {logos.map((logo) => (
             <Image key={logo} src={logo} alt="partner-logo" />
           ))}
           {logos.map((logo) => (
             <Image key={logo} src={logo} alt="partner-logo" />
           ))}
-        </motion.div>
+        </div>
       </div>
       <div className={styles.sliderContainerMobile}>
-        <motion.div
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
-          transition={{
-            duration: 20,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className={styles.slider1}
-        >
+        <div className={styles.slider1}>
           {logos.map((logo) => (
             <Image key={logo} src={logo} alt="partner-logo" />
           ))}
-        </motion.div>
-        <motion.div
-          initial={{ x: 0 }}
-          animate={{ x: "100%" }}
-          transition={{
-            duration: 20,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className={styles.slider2}
-        >
+        </div>
+        <div className={styles.slider2}>
           {logos.map((logo) => (
             <Image key={logo} src={logo} alt="partner-logo" />
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
