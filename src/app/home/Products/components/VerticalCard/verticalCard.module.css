@@ -20,6 +20,8 @@
 .image img {
   border-radius: 16px;
   object-fit: cover;
+  aspect-ratio: 1.50;
+
 }
 
 .info {
