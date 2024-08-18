@@ -42,7 +42,6 @@
 .image img {
   border-radius: 20px;
   object-fit: fill;
-  aspect-ratio: 1.50;
 }
 
 @media screen and (max-width: 1024px) {
