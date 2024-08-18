@@ -33,6 +33,12 @@
   width: fit-content;
 }
 
+.image {
+  width: 446px;
+  height: 366px;
+  position: relative;
+}
+
 .image img {
   border-radius: 20px;
   object-fit: fill;
