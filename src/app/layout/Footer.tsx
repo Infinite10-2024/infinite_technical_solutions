@@ -11,7 +11,7 @@ const Footer = () => {
   const openCodingBox = () => {
     window.open("http://www.codingbox.app");
   };
-  
+
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerContent}>
@@ -31,7 +31,11 @@ const Footer = () => {
       </div>
       <div className={styles.coding}>
         <p>Desarrollado por:</p>
-        <Button type="ghost" onClick={openCodingBox}>
+        <Button
+          type="ghost"
+          onClick={openCodingBox}
+          ariaLabel="Coding Box Page"
+        >
           <CodingBoxLogo height={40} />
         </Button>
       </div>
