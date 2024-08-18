@@ -24,6 +24,7 @@ const MobileMenu = ({ handleNavClick, setShowMenu }: MobileMenuProps) => {
           icon={<Close />}
           type="ghost"
           onClick={() => setShowMenu(false)}
+          ariaLabel="Menu Button"
         />
       </div>
       <ul className={styles.mobileRouteList}>

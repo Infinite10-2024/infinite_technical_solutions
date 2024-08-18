@@ -69,7 +69,12 @@ const Hero = () => {
             </div>
             <div className={styles.assetsRow2}>
               <div className={styles.whiteCube}>
-                <Image src={consultingRoom} alt="consulting-room" fill></Image>
+                <Image
+                  priority={true}
+                  src={consultingRoom}
+                  alt="consulting-room"
+                  fill
+                ></Image>
               </div>
             </div>
           </div>
@@ -83,7 +88,7 @@ const Hero = () => {
       </div>
       <div className={styles.bottom}>
         <ExploreButton />
-        <Image src={heroBottom} alt="bottom" />
+        <Image priority={true} src={heroBottom} alt="bottom" />
       </div>
     </div>
   );
