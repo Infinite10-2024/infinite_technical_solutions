@@ -34,6 +34,8 @@ const Header = () => {
   };
 
   useEffect(() => {
+    if (window.innerWidth < 1120) return;
+
     const sectionNames = ["home", "products", "about", "contact"];
     const sections = sectionNames.map((s) => document.getElementById(s));
     const heroSection = document.getElementById("home");
