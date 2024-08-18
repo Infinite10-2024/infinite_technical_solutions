@@ -351,16 +351,16 @@
   .gear {
     display: none;
   }
-}
-
-@media (max-width: 500px) {
-  .redCube {
-    flex: 3;
-  }
 
   .info,
   .assets {
     animation: none;
     opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .redCube {
+    flex: 3;
   }
 }
