@@ -6,7 +6,7 @@
   cursor: pointer;
 }
 
-.container svg {
+.svg {
   animation: rotate360 60s infinite linear;
 }
 

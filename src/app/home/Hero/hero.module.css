@@ -145,7 +145,6 @@
 
 .whiteCube {
   margin: auto;
-  width: fit-content;
   display: flex;
   gap: 34px;
   align-items: center;
