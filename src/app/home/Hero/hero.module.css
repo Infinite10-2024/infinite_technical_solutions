@@ -77,11 +77,11 @@
 }
 
 .redCube p {
-  font-size: clamp(10px, 3vw, 26px);
+  font-size: clamp(16px, 3vw, 26px);
 }
 
 .redCube p:nth-child(2) {
-  font-size: clamp(10px, 3.5vw, 32px);
+  font-size: clamp(28px, 3.5vw, 32px);
   font-weight: 700;
 }
 
@@ -256,7 +256,6 @@
 
   .redCube {
     flex: 2;
-    padding-inline: 28px 20px;
     display: flex;
     align-items: center;
   }

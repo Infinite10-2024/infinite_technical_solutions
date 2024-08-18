@@ -67,9 +67,6 @@ const Hero = () => {
                   <p>Your</p>
                   <p>Trusted</p>
                   <p>Partner</p>
-                  {/* <p className={styles.assetText}>
-                    Infinite Technical Solutions, <br /> guarantee
-                  </p> */}
                 </div>
               </div>
               <div className={styles.blueCube}>
