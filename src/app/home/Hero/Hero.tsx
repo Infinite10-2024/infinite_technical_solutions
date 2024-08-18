@@ -18,7 +18,7 @@ const Hero = () => {
           <Shine />
         </div>
         <div className={styles.content}>
-          <motion.div className={styles.info}>
+          <div className={styles.info}>
             <div>
               <h1 className={styles.slogan}>
                 The solution for all your office needs
@@ -49,8 +49,8 @@ const Hero = () => {
                 </Button>
               </div>
             </div>
-          </motion.div>
-          <motion.div className={styles.assets}>
+          </div>
+          <div className={styles.assets}>
             <div className={styles.assetsRow1}>
               <div className={styles.redCube}>
                 <div className={styles.redCubeContent}>
@@ -73,7 +73,7 @@ const Hero = () => {
                 <Image src={consultingRoom} alt="consulting-room" fill></Image>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
         <div className={styles.shineLeft}>
           <Shine />
@@ -83,12 +83,12 @@ const Hero = () => {
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
         >
-          <Image src={heroGear} alt="gear" />
+          <Image priority={true} src={heroGear} alt="gear" />
         </motion.div>
       </div>
       <div className={styles.bottom}>
         <ExploreButton />
-        <Image src={heroBottom} alt="bottom" />
+        <Image priority={true} src={heroBottom} alt="bottom" />
       </div>
     </div>
   );

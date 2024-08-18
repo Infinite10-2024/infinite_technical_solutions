@@ -59,6 +59,7 @@ const Header = () => {
         height={78}
         onClick={(e) => handleNavClick(e, "home")}
         className={styles.logo}
+        priority={true}
       />
       <nav>
         <ul className={styles.routeList}>
@@ -103,11 +104,11 @@ const Header = () => {
       </div>
 
       <div className={styles.call}>
-        <Button icon={<Call />} type="outlined-contrast">
-          <Link target="_blank" href="tel:+3012890029">
+        <Link target="_blank" href="tel:+3012890029">
+          <Button icon={<Call />} type="outlined-contrast">
             224 800 5302
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </div>
   );

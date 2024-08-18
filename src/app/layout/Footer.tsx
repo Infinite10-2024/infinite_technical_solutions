@@ -1,10 +1,17 @@
+"use client";
+
 import styles from "./layout.module.css";
 import logo from "../../../public/assets/svg/contrast-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import CodingBoxLogo from "../../../public/assets/icons/CodingBoxLogo";
+import Button from "../components/Button";
 
 const Footer = () => {
+  const openCodingBox = () => {
+    window.open("http://www.codingbox.app");
+  };
+  
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerContent}>
@@ -24,9 +31,9 @@ const Footer = () => {
       </div>
       <div className={styles.coding}>
         <p>Desarrollado por:</p>
-        <Link href="http://www.codingbox.app" target="_blank">
+        <Button type="ghost" onClick={openCodingBox}>
           <CodingBoxLogo height={40} />
-        </Link>
+        </Button>
       </div>
     </div>
   );

@@ -109,7 +109,7 @@ const Value = () => {
               >
                 <Image
                   src={img.image}
-                  alt={img.text}
+                  alt={`image-${index}`}
                   style={{ width: "100%" }}
                 />
                 <div
@@ -122,7 +122,7 @@ const Value = () => {
                 ></div>
                 <p
                   style={{
-                    opacity: activeImg === index ? 1 : 0,
+                    opacity: isActiveImg ? 1 : 0,
                   }}
                 >
                   {img.text}

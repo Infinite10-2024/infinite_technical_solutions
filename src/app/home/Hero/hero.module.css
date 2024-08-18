@@ -31,12 +31,12 @@
   gap: 24px;
   flex: 1;
   max-width: 660px;
-  animation: slideLeft 1s ease;
+  animation: slideLeft 0.75s ease;
 }
 
 @keyframes slideLeft {
   from {
-    transform: translateX(-10%);
+    transform: translateX(-20%);
     opacity: 0;
   }
   to {
@@ -67,14 +67,14 @@
   flex: 1;
   width: 527px;
   max-width: 527px;
-  animation: slideRight 1s ease 0.3s;
+  animation: slideRight 0.75s ease 0.3s;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 
 @keyframes slideRight {
   from {
-    transform: translateX(10%);
+    transform: translateX(20%);
     opacity: 0;
   }
   to {
