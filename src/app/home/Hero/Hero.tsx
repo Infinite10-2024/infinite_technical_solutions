@@ -7,7 +7,6 @@ import Highlight from "@/app/components/Highlight";
 import Shine from "./components/Shine";
 import ExploreButton from "./components/ExploreButton";
 import consultingRoom from "../../../../public/assets/img/hero/consulting-room.webp";
-import { motion } from "framer-motion";
 import { detectScroll } from "@/app/utils/scroll";
 
 const Hero = () => {
@@ -78,13 +77,13 @@ const Hero = () => {
         <div className={styles.shineLeft}>
           <Shine />
         </div>
-        <motion.div
-          className={styles.gear}
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
-        >
-          <Image priority={true} src={heroGear} alt="gear" />
-        </motion.div>
+        <div className={styles.gear}>
+          <Image
+            priority={window.innerWidth >= 700}
+            src={heroGear}
+            alt="gear"
+          />
+        </div>
       </div>
       <div className={styles.bottom}>
         <ExploreButton />

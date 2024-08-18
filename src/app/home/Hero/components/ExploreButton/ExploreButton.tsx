@@ -1,27 +1,18 @@
 import Image from "next/image";
 import styles from "./exploreButton.module.css";
 import playBtn from "../../../../../../public/assets/svg/hero/hero-play-btn.svg";
-import { motion } from "framer-motion";
 import { detectScroll } from "@/app/utils/scroll";
 import Button from "@/app/components/Button";
 
 const ExploreButton = () => {
   return (
     <div className={styles.container}>
-      <motion.svg
+      <svg
         width="237"
         height="237"
         viewBox="0 0 237 237"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        animate={{
-          rotate: 360,
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 60,
-          ease: "linear",
-        }}
       >
         <path
           d="M217.47 120.313C217.499 119.915 217.631 119.615 217.865 119.413C218.112 119.212 218.435 119.126 218.833 119.155L231.038 120.051L230.373 129.099L229.141 129.009L229.701 121.386L224.965 121.038L224.448 128.084L223.216 127.993L223.733 120.947L218.689 120.577L218.13 128.2L216.898 128.11L217.47 120.313Z"
@@ -163,7 +154,7 @@ const ExploreButton = () => {
           d="M212.313 86.4811C212.205 86.0969 212.228 85.77 212.379 85.5004C212.544 85.2275 212.818 85.0373 213.202 84.9301L224.99 81.6396L227.429 90.3779L226.239 90.71L224.184 83.3476L219.61 84.6243L221.51 91.429L220.32 91.7611L218.42 84.9565L213.549 86.3163L215.604 93.6787L214.414 94.0108L212.313 86.4811Z"
           fill="white"
         />
-      </motion.svg>
+      </svg>
       <div className={styles.playBtn}>
         <Button type="ghost" onClick={(e) => detectScroll(e, "products")}>
           <Image src={playBtn} alt="playBtn" />
