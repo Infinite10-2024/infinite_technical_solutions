@@ -49,12 +49,12 @@
 
 .slider1 {
   animation: slide 80s linear infinite alternate;
-  width: 800vw;
+  width: 800%;
 }
 
 .slider2 {
   animation: slideReverse 80s linear infinite alternate;
-  width: 800vw;
+  width: 800%;
 }
 
 @keyframes slide {
