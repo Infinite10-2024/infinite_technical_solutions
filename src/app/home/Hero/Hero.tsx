@@ -59,12 +59,9 @@ const Hero = () => {
                 </div>
               </div>
               <div className={styles.blueCube}>
-                <div className={styles.blueCubeContent}>
-                  <p className={styles.assetHeading}>1 year</p>
                   <p className={styles.assetText}>
                     Serving All Brand, <br /> <b>with excellence</b>
                   </p>
-                </div>
               </div>
             </div>
             <div className={styles.assetsRow2}>
