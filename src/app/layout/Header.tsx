@@ -52,15 +52,16 @@ const Header = () => {
 
   return (
     <div className={styles.headerContainer}>
-      <Image
-        src="assets/svg/main-logo.svg"
-        alt="main-logo"
-        width={257}
-        height={78}
-        onClick={(e) => handleNavClick(e, "home")}
-        className={styles.logo}
-        priority={true}
-      />
+      <Link href="/">
+        <Image
+          src="assets/svg/main-logo.svg"
+          alt="main-logo"
+          width={257}
+          height={78}
+          className={styles.logo}
+          priority={true}
+        />
+      </Link>
       <nav>
         <ul className={styles.routeList}>
           {routes.map((route) => (
