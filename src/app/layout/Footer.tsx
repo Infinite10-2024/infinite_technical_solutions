@@ -18,12 +18,12 @@ const Footer = () => {
         <Image src={logo} alt="footer-logo" />
         <ul className={styles.footerRow}>
           <li>
-            <Link target="_blank" href="docs/Privacy_Policy_ITS.pdf">
+            <Link target="_blank" href="/pdf/Privacy_Policy_ITS.pdf">
               Privacy Policy
             </Link>
           </li>
           <li>
-            <Link target="_blank" href="docs/Terms_&_Conditions_ITS.pdf">
+            <Link target="_blank" href="/pdf/Terms_&_Conditions_ITS.pdf">
               Terms & Conditions
             </Link>
           </li>

@@ -1,0 +1,11 @@
+.pdf {
+  margin: auto;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.page {
+  box-shadow: rgba(0, 0, 0, 0.36) 0px 3px 6px, rgba(0, 0, 0, 0.43) 0px 3px 6px;
+}
