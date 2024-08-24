@@ -47,17 +47,21 @@ const Contact = () => {
           <b>You always will be receiving a personalized service. </b>
         </p>
         <div className={styles.btnsRow}>
-          {/* <Button type="primary">Fill form</Button> */}
-          <Button type="secondary">
-            <Link target="_blank" href="tel:+3012890029">
-              Make a call
-            </Link>
-          </Button>
-          <Button type="outlined-contrast">
-            <Link target="_blank" href="mailto:customerservice@infinitetechnicalsolutions.com">
-              Send an e-mail
-            </Link>
-          </Button>
+          <Link
+            target="_blank"
+            href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEdd7y3TKBUMEg0WVI2VjlFME05TjUzMDVRNlBORlFRWC4u"
+          >
+            <Button type="primary">Fill form</Button>
+          </Link>
+          <Link target="_blank" href="tel:+3012890029">
+            <Button type="secondary">Make a call</Button>
+          </Link>
+          <Link
+            target="_blank"
+            href="mailto:customerservice@infinitetechnicalsolutions.com"
+          >
+            <Button type="outlined-contrast">Send an e-mail</Button>
+          </Link>
         </div>
       </motion.div>
       <motion.div

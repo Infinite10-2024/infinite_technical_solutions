@@ -93,7 +93,7 @@
   border-radius: 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .redCube {
@@ -102,7 +102,8 @@
   padding: 32px;
 }
 
-.redCube p {
+.redCube p,
+.blueCube p {
   font-size: clamp(16px, 3vw, 26px);
 }
 
@@ -115,19 +116,11 @@
   flex: 3;
   background-color: var(--color-secondary);
   padding: 32px;
-  display: flex;
-  align-items: center;
 }
 
-.assetHeading {
-  font-size: clamp(28px, 4vw, 48px);
+.blueCube b {
+  font-size: clamp(28px, 3.5vw, 32px);
   font-weight: 700;
-}
-
-.assetText {
-  font-size: clamp(22px, 3.5vw, 18px);
-  font-weight: 500;
-  max-width: 170px;
 }
 
 .assetsRow2 {
