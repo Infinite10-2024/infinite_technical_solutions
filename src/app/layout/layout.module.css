@@ -82,13 +82,19 @@
 .footerContent {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 34px;
   width: fit-content;
   margin: auto;
+  color: var(--color-font-contrast);
 }
 
 .footerContent img {
   margin: auto;
+}
+
+.footerContent p {
+  font-weight: 600;
 }
 
 .footerRow {

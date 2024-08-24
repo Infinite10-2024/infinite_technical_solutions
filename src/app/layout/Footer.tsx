@@ -28,6 +28,7 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
+        <p>&copy; 2024 ITS, All right reserved</p>
       </div>
       <div className={styles.coding}>
         <p>Desarrollado por:</p>
