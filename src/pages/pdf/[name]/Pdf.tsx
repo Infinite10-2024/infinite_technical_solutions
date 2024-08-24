@@ -3,7 +3,7 @@
 import { useRouter } from "next/router";
 import { Document, Page, pdfjs } from "react-pdf";
 import styles from "./pdf.module.css";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
