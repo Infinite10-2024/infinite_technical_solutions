@@ -27,12 +27,13 @@ const Pdf = () => {
   }
 
   return (
-    <div style={{ backgroundColor: "#525659", margin: "-8px" }}>
+    <div className={styles.container}>
       <Document
         file={pdf}
         className={styles.pdf}
         onLoadSuccess={onDocumentLoadSuccess}
         options={options}
+        loading={<p style={{ color: "white" }}>Loading PDF...</p>}
       >
         {Array.from(new Array(numPages), (_el, index) => (
           <Page
