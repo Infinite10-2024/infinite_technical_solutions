@@ -47,10 +47,7 @@ const Contact = () => {
           <b>You always will be receiving a personalized service. </b>
         </p>
         <div className={styles.btnsRow}>
-          <Link
-            target="_blank"
-            href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEdd7y3TKBUMEg0WVI2VjlFME05TjUzMDVRNlBORlFRWC4u"
-          >
+          <Link target="_blank" href="https://forms.gle/VFGAwK5TKg8NZVdH6">
             <Button type="primary">Fill form</Button>
           </Link>
           <Link target="_blank" href="tel:+3012890029">
